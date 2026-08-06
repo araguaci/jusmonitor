@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JusMonitor — Monitoramento de Captura Judicial e Decisões de Impacto</title>
+<meta name="description" content="Painel open-source de monitoramento do Judiciário brasileiro: penduricalhos, corrupção judicial, HCs, solturas e decisões de alto impacto. Dados CC0 a partir do corpus lawfare-timeline.">
+<link rel="canonical" href="https://jusmonitor.vercel.app">
+<meta property="og:title" content="JusMonitor — Captura judicial e decisões de impacto">
+<meta property="og:description" content="Feed unificado de captura institucional e decisões polêmicas do Judiciário brasileiro. Open source · CC0.">
+<meta property="og:url" content="https://jusmonitor.vercel.app">
+<meta property="og:type" content="website">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#feed" class="skip-link">Pular para o feed</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#"><span class="dot" aria-hidden="true"></span>JusMonitor</a>
+    <nav aria-label="Seções">
+      <ul class="nav-links">
+        <li><a href="#feed">Feed</a></li>
+        <li><a href="#alertas">Alertas</a></li>
+        <li><a href="#dados">Dados</a></li>
+        <li><a href="#metodologia">Metodologia</a></li>
+        <li><a href="#contribuir">Contribuir</a></li>
+      </ul>
+    </nav>
+    <div class="nav-badge" title="Fontes públicas verificáveis">
+      <svg class="icon icon-stroke" style="width:14px;height:14px" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      OPEN DATA · CC0
+    </div>
+    <div class="topbar-stat">Sync: <b id="syncDate">—</b></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Open source · lawfare-timeline · República Sequestrada</div>
+  <h1>Jus<span>Monitor</span><br><em>Conheça. Exija prestação de contas.</em></h1>
+  <p class="lede">
+    Painel unificado de <b>captura institucional do Judiciário</b> (penduricalhos, venda de sentenças, CNJ, chokepoints do STF)
+    e <b>decisões de alto impacto</b> (solturas, HCs, progressões e arquivamentos em crimes violentos).
+    Cada entrada carrega classificação evidencial e trilha de fontes — corpus CC0.
+  </p>
+  <div class="stat-grid" id="statGrid"></div>
+</section>
+
+<div class="notice-bar" style="max-width:1180px;margin:1rem auto 0;padding-left:1.25rem;padding-right:1.25rem;background:transparent;border:none">
+  <div class="notice-bar" style="width:100%;margin:0">
+    <svg class="icon icon-stroke" style="width:18px;height:18px;color:var(--accent-3);flex-shrink:0" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+    <span>
+      <strong>AVISO:</strong> Registros verificáveis em fontes públicas. A apresentação de casos
+      <em>não implica culpa ou erro</em> do magistrado — registra o impacto público de decisões e eventos.
+      Contribuições passam por curadoria humana antes de entrar no feed.
+    </span>
+  </div>
+</div>
+
+<div class="controls" id="controls">
+  <div class="search-wrap">
+    <input type="search" id="search" placeholder="Buscar por título, tribunal, tag, referência…" aria-label="Buscar casos">
+  </div>
+  <div class="filter-row" id="filterTrack"></div>
+  <div class="filter-row" id="filterGroup"></div>
+  <div class="filter-row" id="filterCrime"></div>
+  <div class="filter-row" id="filterEvidence"></div>
+</div>
+
+<main class="feed" id="feed">
+  <div class="count-row" id="countRow">Carregando…</div>
+  <div class="card-list" id="cardList">
+    <div class="loading-state">Carregando data/unified.json…</div>
+  </div>
+</main>
+
+<section class="section" id="alertas" aria-labelledby="heading-alertas">
+  <h2 class="section-title" id="heading-alertas">Alertas de risco sistêmico</h2>
+  <div class="alerts-grid" id="alertsGrid"></div>
+</section>
+
+<section class="section" id="dados" aria-labelledby="heading-dados">
+  <h2 class="section-title" id="heading-dados">Dados agregados</h2>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Indicador</th>
+          <th>Valor</th>
+          <th>Período</th>
+          <th>Fonte</th>
+          <th>Nota</th>
+        </tr>
+      </thead>
+      <tbody id="dataTableBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section" id="metodologia" aria-labelledby="heading-metodologia">
+  <h2 class="section-title" id="heading-metodologia">Metodologia</h2>
+  <div class="about-box">
+    <h3>Duas trilhas, um schema</h3>
+    <p>
+      <code>captura_institucional</code> deriva de <code>lawfare.json</code> via extract JusMonitor
+      (corrupção judicial, penduricalhos, CNJ, chokepoints).
+      <code>decisoes_impacto</code> deriva do sidecar T-209 JustiçaWatch (HCs, progressões, arquivamentos).
+      Ambos são mesclados em <code>data/unified.json</code>.
+    </p>
+    <h3>Evidência</h3>
+    <p>
+      <code>ev-confirmed</code> = fonte jornalística/documental identificada e verificável.
+      <code>ev-alleged</code> = entrada ainda sem fonte primária registrada — pendente, nunca tratada como confirmada.
+    </p>
+    <h3>Lacuna investigativa</h3>
+    <p id="lacunaText"></p>
+    <h3>Como atualizar</h3>
+    <p>
+      Regenerar seeds a partir do corpus e rodar <code>python scripts/build-unified.py</code>.
+      Ver <a href="docs/ARCHITECTURE.md">docs/ARCHITECTURE.md</a> e <a href="docs/METODOLOGIA.md">docs/METODOLOGIA.md</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="contribuir" aria-labelledby="heading-contribuir">
+  <h2 class="section-title" id="heading-contribuir">Contribuir</h2>
+  <div class="about-box">
+    <p>
+      O JusMonitor é open source (CC0). A comunidade pode propor casos via GitHub Issues ou PRs em
+      <code>data/contributions/</code>. Contribuição ≠ publicação automática — há curadoria humana.
+    </p>
+    <ul>
+      <li>Fontes verificáveis em portais oficiais ou jornalismo primário</li>
+      <li>Schema documentado em <a href="docs/DATA_SCHEMA.md">DATA_SCHEMA.md</a></li>
+      <li>Guia em <a href="CONTRIBUTING.md">CONTRIBUTING.md</a></li>
+    </ul>
+    <div class="contrib-cta">
+      <a class="btn btn-primary" href="https://github.com/araguaci/jusmonitor/issues/new/choose" id="link-issues" rel="noopener">Abrir issue</a>
+      <a class="btn btn-ghost" href="https://github.com/araguaci/jusmonitor" rel="noopener">GitHub</a>
+      <a class="btn btn-ghost" href="CONTRIBUTING.md">Como contribuir</a>
+      <a class="btn btn-ghost" href="docs/DATA_SCHEMA.md">Schema JSON</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fwrap">
+    <p>JusMonitor · CC0 1.0 Universal — domínio público · corpus lawfare-timeline</p>
+    <p>
+      <a href="https://jusmonitor.vercel.app">jusmonitor.vercel.app</a> ·
+      <a href="https://lawfare-timeline.vercel.app">lawfare-timeline</a> ·
+      <a href="https://gosurf.site">gosurf.site</a>
+    </p>
+  </div>
+</footer>
+
+<button id="gotop" aria-label="Voltar ao topo">↑</button>
+<script src="app.js" defer></script>
+</body>
+</html>

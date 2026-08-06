@@ -1,0 +1,24 @@
+name: Validate data
+
+on:
+  push:
+    paths:
+      - "data/**"
+      - "scripts/**"
+  pull_request:
+    paths:
+      - "data/**"
+      - "scripts/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build unified.json
+        run: python scripts/build-unified.py
+      - name: Validate schema
+        run: python scripts/validate-schema.py

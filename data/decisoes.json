@@ -1,0 +1,310 @@
+{
+ "gerado_de": "justicawatch-brasil.json (T-209)",
+ "sync_date": "2026-05-28",
+ "total": 11,
+ "track": "decisoes_impacto",
+ "estatisticas": {
+  "hc_traficantes_stj_2024": 9166,
+  "hc_trafico_stf_2024": 577,
+  "taxa_reincidencia_br": "42%",
+  "populacao_carceraria": 834000,
+  "foragidos_hc_marco_aurelio_2020": 21
+ },
+ "cards": [
+  {
+   "id": "jw-2006-stf-progress-o-de-regime-crimes-hediondos",
+   "data": "2006-01-01",
+   "titulo": "Progressão de regime — Crimes hediondos",
+   "descricao": "HC coletivo · STF. Referência: HC 82.959-7/SP — Rel. Min. Marco Aurélio",
+   "grupo": "soltura_hc",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "homicidio",
+    "estupro",
+    "latrocinio"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "homicidio",
+    "estupro",
+    "latrocinio"
+   ],
+   "tipo_decisao": "HC coletivo",
+   "ref": "HC 82.959-7/SP — Rel. Min. Marco Aurélio",
+   "tribunal": "STF"
+  },
+  {
+   "id": "jw-2009-stf-tr-nsito-em-julgado-para-in-cio-de-pena",
+   "data": "2009-01-01",
+   "titulo": "Trânsito em julgado para início de pena",
+   "descricao": "Mudança jurisprudencial · STF. Referência: HC 84.078/MG — Rel. Min. Eros Grau",
+   "grupo": "jurisprudencia_estrutural",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "corrupcao"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "corrupcao"
+   ],
+   "tipo_decisao": "Mudança jurisprudencial",
+   "ref": "HC 84.078/MG — Rel. Min. Eros Grau",
+   "tribunal": "STF"
+  },
+  {
+   "id": "jw-2019-stf-retorno-ao-tr-nsito-em-julgado-revers-o",
+   "data": "2019-01-01",
+   "titulo": "Retorno ao trânsito em julgado — Reversão Lava Jato",
+   "descricao": "ADC plenário · STF. Referência: ADC 43 — Rel. Min. Marco Aurélio",
+   "grupo": "jurisprudencia_estrutural",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "corrupcao"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "corrupcao"
+   ],
+   "tipo_decisao": "ADC plenário",
+   "ref": "ADC 43 — Rel. Min. Marco Aurélio",
+   "tribunal": "STF"
+  },
+  {
+   "id": "jw-2020-stf-andr-do-rap-l-der-do-pcc-solto-e-foragi",
+   "data": "2020-01-01",
+   "titulo": "André do Rap — Líder do PCC solto e foragido",
+   "descricao": "HC monocrático · STF. Referência: HC 191.836 — Min. Marco Aurélio",
+   "grupo": "foragidos_impacto",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "trafico",
+    "pcc",
+    "foragido"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico",
+    "pcc",
+    "foragido"
+   ],
+   "tipo_decisao": "HC monocrático",
+   "ref": "HC 191.836 — Min. Marco Aurélio",
+   "tribunal": "STF"
+  },
+  {
+   "id": "jw-2020-stf-21-criminosos-foragidos-liminares-marco",
+   "data": "2020-01-01",
+   "titulo": "21 criminosos foragidos — liminares Marco Aurélio",
+   "descricao": "HCs monocráticos · STF. Referência: Investigação Estadão, out/2020",
+   "grupo": "foragidos_impacto",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "trafico",
+    "homicidio",
+    "milicia",
+    "foragido"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico",
+    "homicidio",
+    "milicia",
+    "foragido"
+   ],
+   "tipo_decisao": "HCs monocráticos",
+   "ref": "Investigação Estadão, out/2020",
+   "tribunal": "STF"
+  },
+  {
+   "id": "jw-2020-stj-hc-coletivo-covid-19-soltura-nacional-p",
+   "data": "2020-01-01",
+   "titulo": "HC Coletivo COVID-19 — Soltura nacional por fiança",
+   "descricao": "HC coletivo nacional · STJ. Referência: 3ª Seção STJ, out/2020",
+   "grupo": "soltura_hc",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STJ"
+   ],
+   "tags": [
+    "trafico",
+    "homicidio"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico",
+    "homicidio"
+   ],
+   "tipo_decisao": "HC coletivo nacional",
+   "ref": "3ª Seção STJ, out/2020",
+   "tribunal": "STJ"
+  },
+  {
+   "id": "jw-2021-tj-go-l-zaro-barbosa-progress-o-ignorando-l",
+   "data": "2021-01-01",
+   "titulo": "Lázaro Barbosa — Progressão ignorando laudo de periculosidade",
+   "descricao": "Progressão de regime · TJ-GO. Referência: Relatório SESP-GO/2021",
+   "grupo": "progressao_regime",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TJ-GO"
+   ],
+   "tags": [
+    "homicidio",
+    "estupro"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "homicidio",
+    "estupro"
+   ],
+   "tipo_decisao": "Progressão de regime",
+   "ref": "Relatório SESP-GO/2021",
+   "tribunal": "TJ-GO"
+  },
+  {
+   "id": "jw-2022-stj-anula-o-por-busca-pessoal-122-por-es-de",
+   "data": "2022-01-01",
+   "titulo": "Anulação por busca pessoal — 122 porções de droga devolvidas",
+   "descricao": "Nulidade processual · STJ. Referência: Recursos Repetitivos STJ, tema 1.119",
+   "grupo": "arquivamento",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STJ"
+   ],
+   "tags": [
+    "trafico"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico"
+   ],
+   "tipo_decisao": "Nulidade processual",
+   "ref": "Recursos Repetitivos STJ, tema 1.119",
+   "tribunal": "STJ"
+  },
+  {
+   "id": "jw-2023-stf-anula-o-de-apreens-o-de-695-kg-de-coca-",
+   "data": "2023-01-01",
+   "titulo": "Anulação de apreensão de 695 kg de cocaína",
+   "descricao": "Nulidade de prova · STF. Referência: Dossiê Ascensão do Narcoestado, Sen. Jorge Seif",
+   "grupo": "arquivamento",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "trafico"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico"
+   ],
+   "tipo_decisao": "Nulidade de prova",
+   "ref": "Dossiê Ascensão do Narcoestado, Sen. Jorge Seif",
+   "tribunal": "STF"
+  },
+  {
+   "id": "jw-2024-stj-9-166-habeas-corpus-concedidos-a-trafic",
+   "data": "2024-01-01",
+   "titulo": "9.166 habeas corpus concedidos a traficantes — em 1 ano",
+   "descricao": "Levantamento anual · STJ. Referência: Dossiê Sen. Jorge Seif, 2025",
+   "grupo": "soltura_hc",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STJ"
+   ],
+   "tags": [
+    "trafico",
+    "pcc"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico",
+    "pcc"
+   ],
+   "tipo_decisao": "Levantamento anual",
+   "ref": "Dossiê Sen. Jorge Seif, 2025",
+   "tribunal": "STJ"
+  },
+  {
+   "id": "jw-2025-stj-estupro-de-vulner-vel-afastado-por-erro",
+   "data": "2025-01-01",
+   "titulo": "Estupro de vulnerável — afastado por erro de proibição",
+   "descricao": "Distinguishing jurisprudencial · STJ. Referência: STJ 5ª Turma, out/2025",
+   "grupo": "jurisprudencia_estrutural",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STJ"
+   ],
+   "tags": [
+    "estupro"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "estupro"
+   ],
+   "tipo_decisao": "Distinguishing jurisprudencial",
+   "ref": "STJ 5ª Turma, out/2025",
+   "tribunal": "STJ"
+  }
+ ]
+}

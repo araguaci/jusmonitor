@@ -1,0 +1,22 @@
+{
+  "_comment": "Coloque contribuições aprovadas aqui como *.json (um card ou {\"cards\":[]}). Arquivos começando com _ são ignorados.",
+  "example_card": {
+    "id": "contrib-exemplo-2026",
+    "data": "2026-01-15",
+    "titulo": "Título do caso com fonte verificável",
+    "descricao": "Resumo factual. Não acusar magistrado — registrar a decisão e o impacto público.",
+    "track": "decisoes_impacto",
+    "grupo": "soltura_hc",
+    "crime_tags": ["trafico"],
+    "tipo_decisao": "HC monocrático",
+    "tribunal": "STJ",
+    "ref": "HC XXX.XXX",
+    "tags": ["trafico"],
+    "fontes": ["https://exemplo.gov.br/..."],
+    "evidence_status": "ev-confirmed",
+    "instituicoes": ["STJ"],
+    "relevancia": "alta",
+    "valor_envolvido": null,
+    "gravidade": null
+  }
+}

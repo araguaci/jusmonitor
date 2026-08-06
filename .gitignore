@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+.env
+.env.*
+.vercel
+node_modules/
+__pycache__/
+*.pyc
+.Python
+.history/
+.firecrawl/
