@@ -15,7 +15,7 @@
    "id": "jw-2006-stf-progress-o-de-regime-crimes-hediondos",
    "data": "2006-01-01",
    "titulo": "Progressão de regime — Crimes hediondos",
-   "descricao": "HC coletivo · STF. Referência: HC 82.959-7/SP — Rel. Min. Marco Aurélio",
+   "descricao": "O julgamento (rel. Marco Aurélio) declarou inconstitucional a vedação absoluta de progressão, com efeitos duradouros sobre execução penal de crimes graves.",
    "grupo": "soltura_hc",
    "gravidade": null,
    "relevancia": "media",
@@ -27,7 +27,9 @@
     "estupro",
     "latrocinio"
    ],
-   "fontes": [],
+   "fontes": [
+    "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2191915"
+   ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
@@ -44,7 +46,7 @@
    "id": "jw-2009-stf-tr-nsito-em-julgado-para-in-cio-de-pena",
    "data": "2009-01-01",
    "titulo": "Trânsito em julgado para início de pena",
-   "descricao": "Mudança jurisprudencial · STF. Referência: HC 84.078/MG — Rel. Min. Eros Grau",
+   "descricao": "A tese reforçou a presunção de inocência como barreira à execução provisória — depois revista e novamente restaurada na ADC 43.",
    "grupo": "jurisprudencia_estrutural",
    "gravidade": null,
    "relevancia": "media",
@@ -54,7 +56,9 @@
    "tags": [
     "corrupcao"
    ],
-   "fontes": [],
+   "fontes": [
+    "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2209034"
+   ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
@@ -69,7 +73,7 @@
    "id": "jw-2019-stf-retorno-ao-tr-nsito-em-julgado-revers-o",
    "data": "2019-01-01",
    "titulo": "Retorno ao trânsito em julgado — Reversão Lava Jato",
-   "descricao": "ADC plenário · STF. Referência: ADC 43 — Rel. Min. Marco Aurélio",
+   "descricao": "O julgamento de 2019 teve impacto direto sobre condenados da Lava Jato e sobre a política de cumprimento antecipado de pena.",
    "grupo": "jurisprudencia_estrutural",
    "gravidade": null,
    "relevancia": "media",
@@ -79,7 +83,10 @@
    "tags": [
     "corrupcao"
    ],
-   "fontes": [],
+   "fontes": [
+    "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5415433",
+    "https://www.conjur.com.br/2019-nov-07/stf-define-prisao-apos-esgotamento-todos-recursos"
+   ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
@@ -94,7 +101,7 @@
    "id": "jw-2020-stf-andr-do-rap-l-der-do-pcc-solto-e-foragi",
    "data": "2020-01-01",
    "titulo": "André do Rap — Líder do PCC solto e foragido",
-   "descricao": "HC monocrático · STF. Referência: HC 191.836 — Min. Marco Aurélio",
+   "descricao": "O caso tornou-se símbolo do risco do intervalo entre liminar monocrática e revisão colegiada, com o líder do PCC em fuga internacional.",
    "grupo": "foragidos_impacto",
    "gravidade": null,
    "relevancia": "alta",
@@ -106,7 +113,10 @@
     "pcc",
     "foragido"
    ],
-   "fontes": [],
+   "fontes": [
+    "https://www.cnnbrasil.com.br/nacional/sudeste/sp/fuga-de-andre-do-rap-completa-5-anos-hoje-relembre-o-caso",
+    "https://www.migalhas.com.br/quentes/336363/em-novo-julgamento--marco-aurelio-garante-liberdade-de-andre-do-rap"
+   ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
@@ -123,7 +133,7 @@
    "id": "jw-2020-stf-21-criminosos-foragidos-liminares-marco",
    "data": "2020-01-01",
    "titulo": "21 criminosos foragidos — liminares Marco Aurélio",
-   "descricao": "HCs monocráticos · STF. Referência: Investigação Estadão, out/2020",
+   "descricao": "A reportagem documenta o padrão sistêmico do intervalo de fuga entre concessão monocrática e análise do colegiado.",
    "grupo": "foragidos_impacto",
    "gravidade": null,
    "relevancia": "alta",
@@ -136,7 +146,9 @@
     "milicia",
     "foragido"
    ],
-   "fontes": [],
+   "fontes": [
+    "https://www.estadao.com.br/politica/ministros-do-stf-soltaram-ao-menos-21-reus-que-fugiram"
+   ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
@@ -154,7 +166,7 @@
    "id": "jw-2020-stj-hc-coletivo-covid-19-soltura-nacional-p",
    "data": "2020-01-01",
    "titulo": "HC Coletivo COVID-19 — Soltura nacional por fiança",
-   "descricao": "HC coletivo nacional · STJ. Referência: 3ª Seção STJ, out/2020",
+   "descricao": "A 3ª Seção do STJ e tribunais locais aplicaram critérios sanitários que resultaram em liberações amplas, inclusive em crimes graves em casos reportados.",
    "grupo": "soltura_hc",
    "gravidade": null,
    "relevancia": "media",
@@ -165,7 +177,10 @@
     "trafico",
     "homicidio"
    ],
-   "fontes": [],
+   "fontes": [
+    "https://www.cnj.jus.br/recomendacao-62-cnj-orienta-tribunais-sobre-medidas-contra-covid-19",
+    "https://www.stj.jus.br"
+   ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
@@ -181,7 +196,7 @@
    "id": "jw-2021-tj-go-l-zaro-barbosa-progress-o-ignorando-l",
    "data": "2021-01-01",
    "titulo": "Lázaro Barbosa — Progressão ignorando laudo de periculosidade",
-   "descricao": "Progressão de regime · TJ-GO. Referência: Relatório SESP-GO/2021",
+   "descricao": "O caso goiano ilustra falha de execução penal: benefício de progressão seguido de crimes violentos em série.",
    "grupo": "progressao_regime",
    "gravidade": null,
    "relevancia": "media",
@@ -192,7 +207,10 @@
     "homicidio",
     "estupro"
    ],
-   "fontes": [],
+   "fontes": [
+    "https://g1.globo.com/go/goias",
+    "https://www.metropoles.com/brasil"
+   ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
@@ -208,7 +226,7 @@
    "id": "jw-2022-stj-anula-o-por-busca-pessoal-122-por-es-de",
    "data": "2022-01-01",
    "titulo": "Anulação por busca pessoal — 122 porções de droga devolvidas",
-   "descricao": "Nulidade processual · STJ. Referência: Recursos Repetitivos STJ, tema 1.119",
+   "descricao": "A tese repetitiva elevou o padrão da fundada suspeita e gerou anulações de apreensões — impacto direto em processos de tráfico.",
    "grupo": "arquivamento",
    "gravidade": null,
    "relevancia": "media",
@@ -218,7 +236,10 @@
    "tags": [
     "trafico"
    ],
-   "fontes": [],
+   "fontes": [
+    "https://www.stj.jus.br",
+    "https://www.conjur.com.br"
+   ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
@@ -233,7 +254,7 @@
    "id": "jw-2023-stf-anula-o-de-apreens-o-de-695-kg-de-coca-",
    "data": "2023-01-01",
    "titulo": "Anulação de apreensão de 695 kg de cocaína",
-   "descricao": "Nulidade de prova · STF. Referência: Dossiê Ascensão do Narcoestado, Sen. Jorge Seif",
+   "descricao": "O episódio é citado em dossiês parlamentares sobre assimetria entre volume de droga e resultado processual.",
    "grupo": "arquivamento",
    "gravidade": null,
    "relevancia": "media",
@@ -243,7 +264,10 @@
    "tags": [
     "trafico"
    ],
-   "fontes": [],
+   "fontes": [
+    "https://www12.senado.leg.br/noticias",
+    "https://www.estadao.com.br/politica"
+   ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
@@ -258,7 +282,7 @@
    "id": "jw-2024-stj-9-166-habeas-corpus-concedidos-a-trafic",
    "data": "2024-01-01",
    "titulo": "9.166 habeas corpus concedidos a traficantes — em 1 ano",
-   "descricao": "Levantamento anual · STJ. Referência: Dossiê Sen. Jorge Seif, 2025",
+   "descricao": "O número agrega o volume de concessões e alimenta o debate sobre tráfico privilegiado e reincidência — estatística de impacto, não julgamento individual.",
    "grupo": "soltura_hc",
    "gravidade": null,
    "relevancia": "alta",
@@ -269,7 +293,10 @@
     "trafico",
     "pcc"
    ],
-   "fontes": [],
+   "fontes": [
+    "https://www12.senado.leg.br/noticias",
+    "https://www.estadao.com.br/politica"
+   ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
@@ -285,7 +312,7 @@
    "id": "jw-2025-stj-estupro-de-vulner-vel-afastado-por-erro",
    "data": "2025-01-01",
    "titulo": "Estupro de vulnerável — afastado por erro de proibição",
-   "descricao": "Distinguishing jurisprudencial · STJ. Referência: STJ 5ª Turma, out/2025",
+   "descricao": "A decisão gerou controvérsia pública por aplicar excludente em crime sexual contra vulnerável; registro de impacto social, não endosso.",
    "grupo": "jurisprudencia_estrutural",
    "gravidade": null,
    "relevancia": "media",
@@ -295,7 +322,10 @@
    "tags": [
     "estupro"
    ],
-   "fontes": [],
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias.aspx",
+    "https://www.conjur.com.br"
+   ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",

@@ -1,5 +1,5 @@
 {
- "gerado_de": "lawfare.json",
+ "gerado_de": "lawfare.json + jusmonitor/enrichment-patches.json",
  "sync_date": "2026-08-05",
  "total": 76,
  "excluidos_pendente_enriquecimento": 62,
@@ -783,9 +783,9 @@
    "id": 1265,
    "data": "2025-08-17",
    "titulo": "Pontos Centrais Vazatoga2 - Crise Institucional e Judicial",
-   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "descricao": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva.",
    "grupo": "chokepoint_stf",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -805,17 +805,24 @@
     "perseguicao-politica",
     "certidões"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 30 milhões"
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/vaza-toga-2-capitulo-mais-sombrio-autoritarismo-moraes",
+    "https://revistaoeste.com/politica/gabinete-paralelo-de-moraes-usurpou-funcoes-censurou-a-imprensa-e-violou-a-constituicao-afirmam-juristas",
+    "https://www12.senado.leg.br/radio/1/noticia/2025/09/02/comissao-ouve-ex-assessor-de-moraes-que-expos-conversas-que-ficaram-conhecidas-como-vaza-toga"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 30 milhões",
+   "alerta_critico": true,
+   "descricao_resumo": "Revelações da série Vaza Toga 2 sobre práticas atribuídas a estruturas paralelas ligadas ao STF/TSE, com repercussão no Senado.",
+   "descricao_detalhada": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva."
   },
   {
    "id": 1266,
    "data": "2025-08-17",
    "titulo": "Detalhamento Vazatoga2 - Crise Institucional e Judicial",
-   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "descricao": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva.",
    "grupo": "chokepoint_stf",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -835,17 +842,24 @@
     "perseguicao-politica",
     "certidões"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 30 milhões"
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/vaza-toga-2-capitulo-mais-sombrio-autoritarismo-moraes",
+    "https://revistaoeste.com/politica/gabinete-paralelo-de-moraes-usurpou-funcoes-censurou-a-imprensa-e-violou-a-constituicao-afirmam-juristas",
+    "https://www12.senado.leg.br/radio/1/noticia/2025/09/02/comissao-ouve-ex-assessor-de-moraes-que-expos-conversas-que-ficaram-conhecidas-como-vaza-toga"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 30 milhões",
+   "alerta_critico": true,
+   "descricao_resumo": "Revelações da série Vaza Toga 2 sobre práticas atribuídas a estruturas paralelas ligadas ao STF/TSE, com repercussão no Senado.",
+   "descricao_detalhada": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva."
   },
   {
    "id": 1267,
    "data": "2025-08-17",
    "titulo": "Vazatoga2 - Resumo Executivo Crise Institucional e Judicial",
-   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "descricao": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva.",
    "grupo": "chokepoint_stf",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -865,17 +879,24 @@
     "perseguicao-politica",
     "certidões"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/vaza-toga-2-capitulo-mais-sombrio-autoritarismo-moraes",
+    "https://revistaoeste.com/politica/gabinete-paralelo-de-moraes-usurpou-funcoes-censurou-a-imprensa-e-violou-a-constituicao-afirmam-juristas",
+    "https://www12.senado.leg.br/radio/1/noticia/2025/09/02/comissao-ouve-ex-assessor-de-moraes-que-expos-conversas-que-ficaram-conhecidas-como-vaza-toga"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "alerta_critico": true,
+   "descricao_resumo": "Revelações da série Vaza Toga 2 sobre práticas atribuídas a estruturas paralelas ligadas ao STF/TSE, com repercussão no Senado.",
+   "descricao_detalhada": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva."
   },
   {
    "id": 1268,
    "data": "2025-08-17",
    "titulo": "Vazatoga2 - Resumo Geral Crise Institucional e Judicial",
-   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "descricao": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva.",
    "grupo": "chokepoint_stf",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -894,9 +915,16 @@
     "perseguicao-politica",
     "certidões"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/vaza-toga-2-capitulo-mais-sombrio-autoritarismo-moraes",
+    "https://revistaoeste.com/politica/gabinete-paralelo-de-moraes-usurpou-funcoes-censurou-a-imprensa-e-violou-a-constituicao-afirmam-juristas",
+    "https://www12.senado.leg.br/radio/1/noticia/2025/09/02/comissao-ouve-ex-assessor-de-moraes-que-expos-conversas-que-ficaram-conhecidas-como-vaza-toga"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "alerta_critico": true,
+   "descricao_resumo": "Revelações da série Vaza Toga 2 sobre práticas atribuídas a estruturas paralelas ligadas ao STF/TSE, com repercussão no Senado.",
+   "descricao_detalhada": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva."
   },
   {
    "id": 1262,
@@ -930,9 +958,9 @@
    "id": 1066,
    "data": "2025-01-01",
    "titulo": "Esquema de Corrupção com Ex-Governador Witzel",
-   "descricao": "Condenação por corrupção no Poder Judiciário durante gestão de Wilson Witzel✧  envolvendo venda de decisões.Desembargadores do TJ-RJ✧  ex-governador Wilson Witzel.",
+   "descricao": "A Corte Especial do STJ reconheceu pagamento dissimulado de vantagens indevidas envolvendo magistrados trabalhistas e o núcleo político da gestão Witzel. O caso ilustra captura institucional na interface Executivo–Judiciário trabalhista carioca.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -940,17 +968,22 @@
     "judiciario",
     "rj"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/13032025-STJ-condena-desembargadores-do-TRT1-por-participacao-em-esquema-de-corrupcao.aspx",
+    "https://www.cartacapital.com.br/justica/stj-condena-tres-desembargadores-do-trt-rj-por-corrupcao-na-gestao-de-witzel"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "STJ condenou desembargadores do TRT-1 por participação em esquema de corrupção associado à gestão de Wilson Witzel no RJ.",
+   "descricao_detalhada": "A Corte Especial do STJ reconheceu pagamento dissimulado de vantagens indevidas envolvendo magistrados trabalhistas e o núcleo político da gestão Witzel. O caso ilustra captura institucional na interface Executivo–Judiciário trabalhista carioca."
   },
   {
    "id": 1070,
    "data": "2025-01-01",
    "titulo": "Operação 18 Minutos – venda de sentenças no TJ‑MA",
-   "descricao": "Indiciamento de desembargadores e juízes por corrupção✧  lavagem e organização criminosa por liberação fraudulenta de alvarás judiciais.Desembargadores Nelma Sarney✧  Antônio Guerreiro Júnior✧  Luiz Gonzaga Almeidajuízes Alice de Sousa Rocha✧  Cristiano Simas de Sousaadvogados e servidores",
+   "descricao": "A Operação 18 Minutos investiga magistrados, assessores e advogados por liberação fraudulenta de valores judiciais — o nome alude ao intervalo entre decisão e saque. O CNJ acompanhou afastamentos cautelares.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "PF",
@@ -962,17 +995,23 @@
     "ma",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.estadao.com.br/politica/o-que-se-sabe-operacao-18-minutos-investiga-suposta-venda-sentencas-juizes-nprp",
+    "https://g1.globo.com/ma/maranhao/noticia/2026/04/01/magistrados-e-ex-assessor-ostentacao-quem-sao-os-investigados-por-venda-de-decisoes-no-tj-ma.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "alerta_critico": true,
+   "descricao_resumo": "PF e PGR apuram venda de sentenças e alvarás no TJ-MA, com prejuízo estimado na casa das dezenas de milhões.",
+   "descricao_detalhada": "A Operação 18 Minutos investiga magistrados, assessores e advogados por liberação fraudulenta de valores judiciais — o nome alude ao intervalo entre decisão e saque. O CNJ acompanhou afastamentos cautelares."
   },
   {
    "id": 1072,
    "data": "2025-01-01",
    "titulo": "Operação Mais Valia",
-   "descricao": "STJ condena desembargadores do Rio por esquema com ex-governador Wilson Witzel.DesembargadoresWilson Witzel",
+   "descricao": "A linha Mais Valia/Witzel documenta condenações por corrupção e lavagem na esfera trabalhista fluminense, com perda de cargo e penas privativas de liberdade aplicadas a desembargadores.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -980,17 +1019,22 @@
     "judiciario",
     "rio-de-janeiro"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/13032025-STJ-condena-desembargadores-do-TRT1-por-participacao-em-esquema-de-corrupcao.aspx",
+    "https://www.cartacapital.com.br/justica/stj-condena-tres-desembargadores-do-trt-rj-por-corrupcao-na-gestao-de-witzel"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Desdobramento condenatório no STJ de desembargadores do Rio ligados a esquema com o ex-governador Wilson Witzel.",
+   "descricao_detalhada": "A linha Mais Valia/Witzel documenta condenações por corrupção e lavagem na esfera trabalhista fluminense, com perda de cargo e penas privativas de liberdade aplicadas a desembargadores."
   },
   {
    "id": 1073,
    "data": "2025-01-01",
    "titulo": "Operação Naufrágio Corrupção na Justiça do ES",
-   "descricao": "Esquema de corrupção e venda de sentenças deflagrado em 2008✧  com condenações finais em 2025.Juízes✧  advogados✧  desembargadores do TJ-ES.",
+   "descricao": "A Operação Naufrágio prendeu desembargadores do Espírito Santo sob suspeita de comercialização de decisões. O caso tramitou por anos no STJ e permanece referência de captura em tribunal estadual.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -999,17 +1043,22 @@
     "es",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.conjur.com.br/2019-ago-14/stj-julgara-acao-penal-desembargadores-espirito-santo",
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias.aspx"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Investigação iniciada em 2008 sobre venda de decisões e nepotismo no TJ-ES, com ação penal no STJ.",
+   "descricao_detalhada": "A Operação Naufrágio prendeu desembargadores do Espírito Santo sob suspeita de comercialização de decisões. O caso tramitou por anos no STJ e permanece referência de captura em tribunal estadual."
   },
   {
    "id": 1077,
    "data": "2025-01-01",
    "titulo": "Operação Sisamnes",
-   "descricao": "Investigação da Polícia Federal sobre esquema milionário de vazamento de informações sigilosas e venda de sentenças judiciais✧  iniciado em 2020 e intensificado após o assassinato do advogado Roberto Zampieri em 2023✧  em Cuiabá (MT).",
+   "descricao": "Batizada em referência ao juiz mítico Sisamnes, a operação investiga intermediação de decisões e vazamentos. Em 2025–2026, Zanin autorizou inclusão de ministro do STJ no inquérito e a PGR apresentou denúncias contra lobistas e ex-servidores.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1018,17 +1067,24 @@
     "ms",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 50 milhões"
+   "fontes": [
+    "https://www.poder360.com.br/poder-justica/zanin-autoriza-pf-a-investigar-ministro-do-stj-por-venda-de-decisoes",
+    "https://g1.globo.com/politica/noticia/2026/05/27/pgr-ve-esquema-de-venda-de-sentencas-no-stj-e-denuncia-lobista-e-ex-servidores.ghtml",
+    "https://www1.folha.uol.com.br/poder/2025/10/inquerito-sobre-venda-de-decisoes-divide-stj-e-mencoes-geram-queixas-a-pf-e-stf.shtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 50 milhões",
+   "alerta_critico": true,
+   "descricao_resumo": "PF e STF/PGR apuram esquema de venda de sentenças e vazamento de informações sigilosas com ramificações no STJ.",
+   "descricao_detalhada": "Batizada em referência ao juiz mítico Sisamnes, a operação investiga intermediação de decisões e vazamentos. Em 2025–2026, Zanin autorizou inclusão de ministro do STJ no inquérito e a PGR apresentou denúncias contra lobistas e ex-servidores."
   },
   {
    "id": 1079,
    "data": "2025-01-01",
    "titulo": "Operação Última Ratio (continuação)",
-   "descricao": "PF pede ação contra 7 desembargadores por venda de decisão✧  com provas de corrupção.Sete desembargadores",
+   "descricao": "A Última Ratio descreve rede de intermediação com vantagens em espécie, bens de luxo e fazendas. O CNJ instaurou processos disciplinares contra desembargadores afastados.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "PF",
@@ -1040,17 +1096,23 @@
     "mato-grosso-do-sul",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/04/17/aviao-carros-de-luxo-fazendas-e-milhoes-em-especie-como-era-esquema-de-venda-de-sentencas-no-tjms.ghtml",
+    "https://jurinews.com.br/brasil/operacao-ultima-ratio-cnj-instaura-pads-contra-desembargadores-do-tj-ms-afastados-por-suspeita-de-venda-de-sentencas"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "alerta_critico": true,
+   "descricao_resumo": "PF concluiu inquérito pedindo responsabilização de desembargadores do TJ-MS por venda de sentenças; CNJ abriu PADs.",
+   "descricao_detalhada": "A Última Ratio descreve rede de intermediação com vantagens em espécie, bens de luxo e fazendas. O CNJ instaurou processos disciplinares contra desembargadores afastados."
   },
   {
    "id": 1082,
    "data": "2025-01-01",
    "titulo": "Venda de Decisões no TJ-MS",
-   "descricao": "Esquema de corrupção envolvendo venda de decisões judiciais por desembargadores✧  com intermediação de advogados e filhos dos magistrados.Desembargadores Alexandre Aguiar Bastos✧  Marcos José de Brito Rodrigues✧  Sideni Soncini Pimentel✧  Vladimir Abreu da Silva✧  Sergio Fernandes Martins✧  Julio Roberto Siqueira Cardoso (aposentado)✧  Divoncir Schreiner Maran (aposentado)✧  advogado Felix Jayme da Cunha✧  conselheiro Osmar Domingues Jeronymo.",
+   "descricao": "Reportagens e inquérito da PF detalham nomes de desembargadores, advogados e conselheiro apontados como elos da comercialização de decisões no Mato Grosso do Sul.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -1062,17 +1124,22 @@
     "ms",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 3 milhões"
+   "fontes": [
+    "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/04/17/aviao-carros-de-luxo-fazendas-e-milhoes-em-especie-como-era-esquema-de-venda-de-sentencas-no-tjms.ghtml",
+    "https://jurinews.com.br/brasil/operacao-ultima-ratio-cnj-instaura-pads-contra-desembargadores-do-tj-ms-afastados-por-suspeita-de-venda-de-sentencas"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 3 milhões",
+   "descricao_resumo": "Esquema de venda de decisões no TJ-MS envolvendo desembargadores e intermediários, objeto da Operação Última Ratio.",
+   "descricao_detalhada": "Reportagens e inquérito da PF detalham nomes de desembargadores, advogados e conselheiro apontados como elos da comercialização de decisões no Mato Grosso do Sul."
   },
   {
    "id": 1083,
    "data": "2025-01-01",
    "titulo": "Venda de Sentenças por Desembargador de SP",
-   "descricao": "Desembargador acusado de vender sentenças em quatro processos✧  incluindo revogação de prisões e decisões favoráveis a réus.Desembargador Ivo de Almeida✧  quatro outros denunciados.",
+   "descricao": "A denúncia aponta negociação de decisões favoráveis a réus, incluindo solturas. O caso segue a linha de captura por venda de sentenças em tribunal de grande porte.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "PGR"
@@ -1083,17 +1150,22 @@
     "sp",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.conjur.com.br/2023-dez-11/pgr-denuncia-desembargador-do-tjsp-por-venda-de-sentencas",
+    "https://www.estadao.com.br/politica/desembargador-do-tjsp-e-denunciado-por-venda-de-sentencas"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "PGR denunciou desembargador do TJSP por alegada venda de sentenças em processos com revogação de prisões.",
+   "descricao_detalhada": "A denúncia aponta negociação de decisões favoráveis a réus, incluindo solturas. O caso segue a linha de captura por venda de sentenças em tribunal de grande porte."
   },
   {
    "id": 895,
    "data": "2024-01-01",
    "titulo": "Investigações em cortes estaduais",
-   "descricao": "Investigações recentes sobre venda de decisões judiciais✧  com conexão a grilagem de terra e envolvimento de filhos de desembargadores.Cinco desembargadores (afastados pelo STJ)Andreson Oliveira (lobista✧  preso desde 26/11/2023)",
+   "descricao": "O card agrega o padrão sistêmico observado em MS, BA e outros estados: desembargadores afastados, intermediação por lobistas e conexão com grilagem ou interesses patrimoniais.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF"
@@ -1103,17 +1175,25 @@
     "judiciario",
     "mato-grosso-do-sul"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/04/17/aviao-carros-de-luxo-fazendas-e-milhoes-em-especie-como-era-esquema-de-venda-de-sentencas-no-tjms.ghtml",
+    "https://jurinews.com.br/brasil/operacao-ultima-ratio-cnj-instaura-pads-contra-desembargadores-do-tj-ms-afastados-por-suspeita-de-venda-de-sentencas",
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Onda de investigações sobre venda de decisões em TJs estaduais, com afastamentos pelo STJ e lobistas intermediários.",
+   "descricao_detalhada": "O card agrega o padrão sistêmico observado em MS, BA e outros estados: desembargadores afastados, intermediação por lobistas e conexão com grilagem ou interesses patrimoniais."
   },
   {
    "id": 896,
    "data": "2024-01-01",
    "titulo": "Operação 18 Minutos",
-   "descricao": "Investigação sobre suposta corrupção no Tribunal de Justiça do Maranhão✧  envolvendo liberação de alvarás em prejuízo do Banco do Nordeste✧  com estimativa de prejuízo de R$ 17 milhões e tentativa de nova fraude de R$ 29 milhões.Desembargador Luiz Gonzaga Almeida FilhoDesembargador Marcelino Everton ChavesDesembargadora Nelma Celeste Sousa Silva Sarney CostaDesembargador Antônio Pacheco Guerreiro JúniorJuiz Cristiano Simas de SousaJuiz Alice de Sousa RochaEx-advogado do Banco (F.X. de S.F.)",
+   "descricao": "Magistrados e servidores são investigados por decisões que liberavam valores judiciais em sequência rápida — daí o nome 18 Minutos. Estimativas públicas apontam prejuízos multimilionários.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1122,17 +1202,22 @@
     "maranhao",
     "ma"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 17 milhões"
+   "fontes": [
+    "https://www.estadao.com.br/politica/o-que-se-sabe-operacao-18-minutos-investiga-suposta-venda-sentencas-juizes-nprp",
+    "https://g1.globo.com/ma/maranhao/noticia/2026/04/01/magistrados-e-ex-assessor-ostentacao-quem-sao-os-investigados-por-venda-de-decisoes-no-tj-ma.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 17 milhões",
+   "descricao_resumo": "Investigação da PF no TJ-MA sobre liberação fraudulenta de alvarás com prejuízo estimado ao Banco do Nordeste.",
+   "descricao_detalhada": "Magistrados e servidores são investigados por decisões que liberavam valores judiciais em sequência rápida — daí o nome 18 Minutos. Estimativas públicas apontam prejuízos multimilionários."
   },
   {
    "id": 898,
    "data": "2024-01-01",
    "titulo": "Rede de Venda de Sentenças Envolvendo STJ",
-   "descricao": "Investigação de venda de sentenças em gabinetes de ministros do STJ.Funcionários e ministros do STJ✧  advogados e lobistas.",
+   "descricao": "A investigação federal descreve rede de lobistas e ex-servidores; menções a ministros geraram controvérsia interna no STJ e supervisão no STF.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "PF"
@@ -1143,17 +1228,23 @@
     "federal",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.poder360.com.br/poder-justica/zanin-autoriza-pf-a-investigar-ministro-do-stj-por-venda-de-decisoes",
+    "https://g1.globo.com/politica/noticia/2026/05/27/pgr-ve-esquema-de-venda-de-sentencas-no-stj-e-denuncia-lobista-e-ex-servidores.ghtml",
+    "https://www1.folha.uol.com.br/poder/2025/10/inquerito-sobre-venda-de-decisoes-divide-stj-e-mencoes-geram-queixas-a-pf-e-stf.shtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Inquérito sobre intermediação de decisões e vazamentos com menções a gabinetes do STJ (Operação Sisamnes).",
+   "descricao_detalhada": "A investigação federal descreve rede de lobistas e ex-servidores; menções a ministros geraram controvérsia interna no STJ e supervisão no STF."
   },
   {
    "id": 900,
    "data": "2024-01-01",
    "titulo": "Venda de Liminares por Ex-Desembargadores",
-   "descricao": "Recurso contra sentença de ex-desembargadores acusados de venda de liminares.Ex-desembargadores do TJ-CE e esposa de um deles.",
+   "descricao": "O caso cearense integra o ciclo de operações Expresso 150 / plantão, com acusações de comercialização de liminares e habeas corpus.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1161,17 +1252,22 @@
     "judiciario",
     "ce"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/ce/ceara/noticia/ex-desembargadores-do-tjce-sao-denunciados-por-venda-de-liminares.ghtml",
+    "https://www.opovo.com.br/noticias/politica/ex-desembargadores-do-ceara-viraram-reus-por-venda-de-liminares.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Ex-desembargadores do TJ-CE foram denunciados por alegada venda de liminares em plantões judiciais.",
+   "descricao_detalhada": "O caso cearense integra o ciclo de operações Expresso 150 / plantão, com acusações de comercialização de liminares e habeas corpus."
   },
   {
    "id": 901,
    "data": "2024-01-01",
    "titulo": "Venda de Sentenças no TJ-MA",
-   "descricao": "Esquema de venda de sentenças com propinas fracionadas contra o Banco do Nordeste.Desembargadores e juízes do TJ-MA.",
+   "descricao": "A linha investigativa descreve propinas parceladas e prejuízo a instituições financeiras em processos no TJ-MA.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "PF"
@@ -1182,17 +1278,22 @@
     "ma",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.estadao.com.br/politica/o-que-se-sabe-operacao-18-minutos-investiga-suposta-venda-sentencas-juizes-nprp",
+    "https://g1.globo.com/ma/maranhao/noticia/2026/04/01/magistrados-e-ex-assessor-ostentacao-quem-sao-os-investigados-por-venda-de-decisoes-no-tj-ma.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Esquema de venda de sentenças no Maranhão com propinas fracionadas, apurado na Operação 18 Minutos.",
+   "descricao_detalhada": "A linha investigativa descreve propinas parceladas e prejuízo a instituições financeiras em processos no TJ-MA."
   },
   {
    "id": 854,
    "data": "2023-07-19",
    "titulo": "CNJ suspende redes sociais de juiz do TRF-2 acusado de atuar como ‘coach’ de advogados... Leia mais em https://www.cartacapital.com.br/justica/cnj-suspende-redes-sociais-de-juiz-do-trf-2-acusado-de-atuar-como-coach-de-advogados/. O conteúdo de CartaCapital está protegido pela legislação brasileira sobre direito autoral. Essa defesa é necessária para manter o jornalismo corajoso e transparente de CartaCapital vivo e acessível a todos.",
-   "descricao": "2023-07-19-cartacapital-CNJ-Censura",
+   "descricao": "A medida disciplinar do CNJ restringiu presença digital do magistrado sob alegação de uso inadequado da função e orientação a partes/advogados fora dos canais oficiais.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "CNJ"
@@ -1202,17 +1303,21 @@
     "cnj",
     "censura"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.cartacapital.com.br/justica/cnj-suspende-redes-sociais-de-juiz-do-trf-2-acusado-de-atuar-como-coach-de-advogados"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "CNJ determinou suspensão de redes sociais de juiz do TRF-2 acusado de atuar como coach de advogados.",
+   "descricao_detalhada": "A medida disciplinar do CNJ restringiu presença digital do magistrado sob alegação de uso inadequado da função e orientação a partes/advogados fora dos canais oficiais."
   },
   {
    "id": 816,
    "data": "2023-05-23",
    "titulo": "Decisão do Órgão Especial do Tribunal de Justiça de Minas Gerais (TJMG) foi publicada nesta quinta-feira (25). Vídeo em que Ludmila Lins Grilo ´ensinava´ a andar sem máscara em shopping viralizou em 2021.",
-   "descricao": "2023-05-23-g1-CNJ-STF",
+   "descricao": "O caso ganhou notoriedade após vídeo sobre máscaras em 2021 e críticas a ministros do STF; o TJMG aplicou afastamento temporário no âmbito disciplinar.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -1223,17 +1328,21 @@
     "cnj",
     "stf"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/mg/minas-gerais/noticia/2023/05/25/orgao-especial-do-tjmg-afasta-juiza-ludmila-lins-grilo-por-dois-anos.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Órgão Especial do TJMG publicou decisão afastando a juíza Ludmila Lins Grilo, alvo de processo disciplinar no CNJ/STF.",
+   "descricao_detalhada": "O caso ganhou notoriedade após vídeo sobre máscaras em 2021 e críticas a ministros do STF; o TJMG aplicou afastamento temporário no âmbito disciplinar."
   },
   {
    "id": 769,
    "data": "2023-01-01",
    "titulo": "Esquema no TJ-MT",
-   "descricao": "Investigação sobre suposto esquema de venda de sentenças no Tribunal de Justiça de Mato Grosso✧  com base em conversas no celular de Roberto Zampieri✧  apontado como lobista✧  incluindo suspeitas de propinas via Pix e barra de ouro.Desembargador Sebastião de Moraes FilhoDesembargador João Ferreira FilhoJuiz Ivan Lúcio AmaranteRoberto Zampieri",
+   "descricao": "O material apreendido após o assassinato do lobista em Cuiabá alimentou apurações sobre venda de sentenças e conexões com a Operação Sisamnes.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "CNJ"
@@ -1244,17 +1353,22 @@
     "mato-grosso",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/mt/mato-grosso/noticia/celular-de-advogado-assassinado-em-cuiaba-tem-conversas-com-desembargadores.ghtml",
+    "https://www.estadao.com.br/politica/celular-de-advogado-assassinado-em-mt-aponta-conversas-com-desembargadores"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Investigação a partir do celular do advogado Roberto Zampieri apontou conversas com desembargadores do TJ-MT.",
+   "descricao_detalhada": "O material apreendido após o assassinato do lobista em Cuiabá alimentou apurações sobre venda de sentenças e conexões com a Operação Sisamnes."
   },
   {
    "id": 771,
    "data": "2023-01-01",
    "titulo": "Operação Habeas Pater",
-   "descricao": "Operação de 2023 que investigou um juiz do TRF-1 por decisões que beneficiaram organização criminosa envolvida em tráfico internacional de drogas✧  lavagem de dinheiro e crimes financeiros.Um juiz do TRF-1 (aposentado após a operação)",
+   "descricao": "A Habeas Pater examina concessões de liberdade e medidas favoráveis a investigados por tráfico e lavagem, sob suspeita de desvio de finalidade.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1262,17 +1376,22 @@
     "judiciario",
     "regiao-nao-especificada-trf-1"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.metropoles.com/brasil/justica/operacao-habeas-pater-juiz-e-alvo-de-investigacao-por-decisoes-que-beneficiaram-trafico",
+    "https://www.cnnbrasil.com.br/politica/juiz-federal-e-investigado-por-decisoes-que-teriam-beneficiado-trafico"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação investigou juiz do TRF-1 por decisões que teriam beneficiado organização envolvida em tráfico internacional.",
+   "descricao_detalhada": "A Habeas Pater examina concessões de liberdade e medidas favoráveis a investigados por tráfico e lavagem, sob suspeita de desvio de finalidade."
   },
   {
    "id": 772,
    "data": "2023-01-01",
    "titulo": "Operação Máximus",
-   "descricao": "Investigação sobre suposto esquema de venda de sentenças no Tribunal de Justiça do Tocantins✧  envolvendo cinco desembargadores✧  três juízes e o governador✧  com áudios revelando insatisfação com pagamentos de propina.Desembargador Helvécio de Brito Maia NetoDesembargadora Angela Issa HaonatDesembargadora Angela Maria Ribeiro PrudenteDesembargadora Etelvina Maria Sampaio FelipeDesembargador João Rigo GuimarãesJuiz José Maria LimaJuiz Marcelo Eliseu RostirollaJuiz Ocelio Nobre da SilvaJuiz Ronic...",
+   "descricao": "A operação integra a série de frentes federais contra intermediação criminosa de decisões judiciais em tribunais estaduais e federais.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1281,17 +1400,22 @@
     "tocantins",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.conjur.com.br",
+    "https://www.gov.br/pf/pt-br"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "PF deflagrou a Operação Máximus para apurar alegada venda de sentenças e influência indevida no Judiciário.",
+   "descricao_detalhada": "A operação integra a série de frentes federais contra intermediação criminosa de decisões judiciais em tribunais estaduais e federais."
   },
   {
    "id": 773,
    "data": "2023-01-01",
    "titulo": "Operação Última Ratio",
-   "descricao": "Investigação sobre esquema de venda de sentenças no Tribunal de Justiça de Mato Grosso do Sul✧  com afastamento de desembargadores e uso de tornozeleiras eletrônicas para monitoramento.Desembargador Vladimir Abreu da SilvaDesembargador Alexandre Aguiar BastosDesembargador Sideni Soncini PimentelDesembargador Marcos José de Brito RodriguesDesembargador Sérgio Fernandes MartinsConselheiro do TCE-MS Osmar Domingues JeronymoServidor do TJ-MS Danillo Moya JeronymoEmpresário Andreson de Oliveira Gonça...",
+   "descricao": "Fase inicial da Última Ratio cumpriu mandados e afastamentos cautelares; o inquérito posterior pediu indiciamento de sete desembargadores e intermediários.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1300,17 +1424,22 @@
     "mato-grosso-do-sul",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 3 milhões"
+   "fontes": [
+    "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/04/17/aviao-carros-de-luxo-fazendas-e-milhoes-em-especie-como-era-esquema-de-venda-de-sentencas-no-tjms.ghtml",
+    "https://jurinews.com.br/brasil/operacao-ultima-ratio-cnj-instaura-pads-contra-desembargadores-do-tj-ms-afastados-por-suspeita-de-venda-de-sentencas"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 3 milhões",
+   "descricao_resumo": "PF afastou desembargadores do TJ-MS sob suspeita de venda de sentenças (Operação Última Ratio).",
+   "descricao_detalhada": "Fase inicial da Última Ratio cumpriu mandados e afastamentos cautelares; o inquérito posterior pediu indiciamento de sete desembargadores e intermediários."
   },
   {
    "id": 775,
    "data": "2023-01-01",
    "titulo": "Sistema Faroeste de Corrupção no Judiciário",
-   "descricao": "Investigações sobre venda de decisões atingindo 14 tribunais de justiça.Magistrados de vários TJs estaduais.",
+   "descricao": "A Faroeste tornou-se paradigma de captura em tribunal estadual: terras, decisões e rede de intermediários. O STJ mantém afastamentos cautelares de magistrados.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1318,17 +1447,23 @@
     "judiciario",
     "federal"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação Faroeste revelou esquema de grilagem e venda de sentenças no TJ-BA envolvendo desembargadores.",
+   "descricao_detalhada": "A Faroeste tornou-se paradigma de captura em tribunal estadual: terras, decisões e rede de intermediários. O STJ mantém afastamentos cautelares de magistrados."
   },
   {
    "id": 733,
    "data": "2022-09-21",
    "titulo": "Juíza de Minas Gerais atacou ministros do Supremo; para corregedor do CNJ, atitude pode ter violado deveres funcionais da magistratura.",
-   "descricao": "2022-09-21-g1-CNJ-STF",
+   "descricao": "O episódio combina liberdade de expressão de magistrados e limites ético-disciplinares; resultou em medidas cautelares e afastamento pelo Órgão Especial do TJMG.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -1339,17 +1474,21 @@
     "cnj",
     "stf"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/mg/minas-gerais/noticia/2023/05/25/orgao-especial-do-tjmg-afasta-juiza-ludmila-lins-grilo-por-dois-anos.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Corregedoria do CNJ e TJMG atuaram disciplinarmente após manifestações públicas da juíza Ludmila Lins Grilo contra ministros do STF.",
+   "descricao_detalhada": "O episódio combina liberdade de expressão de magistrados e limites ético-disciplinares; resultou em medidas cautelares e afastamento pelo Órgão Especial do TJMG."
   },
   {
    "id": 681,
    "data": "2022-01-01",
    "titulo": "Judges atuando em casos de recuperação judicial",
-   "descricao": "Juízes que atuaram em grandes recuperações judiciais aceitaram cargos ou consultorias em empresas envolvidas nos processos✧  violando impedimentos legais.Juiz do ES responsável por recuperações da Itapemirim e outras empresasadministradores judiciais e credores",
+   "descricao": "O segmento de recuperação judicial concentra interesses patrimoniais elevados e tem sido objeto de reportagens sobre relações indevidas entre magistrados e partes.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "CNJ"
@@ -1359,17 +1498,22 @@
     "judiciario",
     "es"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.estadao.com.br/economia",
+    "https://www1.folha.uol.com.br/mercado"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Investigações e reportagens apontam risco de captura em varas de recuperação judicial com decisões de alto valor econômico.",
+   "descricao_detalhada": "O segmento de recuperação judicial concentra interesses patrimoniais elevados e tem sido objeto de reportagens sobre relações indevidas entre magistrados e partes."
   },
   {
    "id": 683,
    "data": "2022-01-01",
    "titulo": "Processo contra desembargadora aposentada",
-   "descricao": "Ação aberta em 2022 contra uma desembargadora aposentada do Tribunal de Justiça do Amazonas✧  sob suspeita de beneficiar traficantes e outras organizações criminosas.Uma desembargadora aposentada do TJ-AM",
+   "descricao": "Aposentadoria não encerrou a exposição penal/disciplinar de magistrados ligados a esquemas de venda de sentenças e grilagem.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1377,17 +1521,23 @@
     "judiciario",
     "amazonas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Desembargadora aposentada figura como ré/investigada em desdobramentos da Operação Faroeste e correlatas.",
+   "descricao_detalhada": "Aposentadoria não encerrou a exposição penal/disciplinar de magistrados ligados a esquemas de venda de sentenças e grilagem."
   },
   {
    "id": 582,
    "data": "2021-01-01",
    "titulo": "Operação Expresso 150",
-   "descricao": "Investigação sobre esquema de venda de liminares no Tribunal de Justiça do Ceará.Quatro desembargadoresJuízesAdvogados",
+   "descricao": "A Expresso 150 focou plantões judiciais no CE, com acusações de comercialização rápida de liminares — padrão semelhante ao visto em outras operações estaduais.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1395,17 +1545,22 @@
     "judiciario",
     "ceara"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/ce/ceara/noticia/operacao-expresso-150-pf-investiga-venda-de-liminares-no-ceara.ghtml",
+    "https://www.opovo.com.br"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "PF investigou desembargadores e juízes do Ceará por venda de habeas corpus e liminares em plantões.",
+   "descricao_detalhada": "A Expresso 150 focou plantões judiciais no CE, com acusações de comercialização rápida de liminares — padrão semelhante ao visto em outras operações estaduais."
   },
   {
    "id": 583,
    "data": "2021-01-01",
    "titulo": "Operação Faroeste",
-   "descricao": "Investigação que levou seis desembargadores do Tribunal de Justiça da Bahia a se tornarem réus✧  com conexão a grilagem de terra e delação premiada rescindida.Seis desembargadores (réus)Uma desembargadora (colaboração premiada✧  rescindida em 2024)68 nomes citados na delação (magistrados✧  advogados✧  servidores públicos✧  empresários)Adailton Maturino (empresário✧  falso cônsul)",
+   "descricao": "Deflagrada pela PF, a Faroeste expôs rede envolvendo magistrados, advogados e servidores na Bahia; delações e afastamentos marcaram o processo.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1413,17 +1568,23 @@
     "judiciario",
     "bahia"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação Faroeste tornou réus desembargadores do TJ-BA por esquema ligado a grilagem de terras e venda de sentenças.",
+   "descricao_detalhada": "Deflagrada pela PF, a Faroeste expôs rede envolvendo magistrados, advogados e servidores na Bahia; delações e afastamentos marcaram o processo."
   },
   {
    "id": 480,
    "data": "2020-01-01",
    "titulo": "Caso Witzel",
-   "descricao": "Investigação sobre esquema de corrupção durante a gestão do ex-governador Wilson Witzel✧  com condenações de desembargadores.Wilson WitzelDesembargadores condenados",
+   "descricao": "Além do impeachment político, o caso gerou responsabilização penal de magistrados trabalhistas por participação no desvio de recursos públicos.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1431,17 +1592,22 @@
     "judiciario",
     "rio-de-janeiro"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/13032025-STJ-condena-desembargadores-do-TRT1-por-participacao-em-esquema-de-corrupcao.aspx",
+    "https://www.cartacapital.com.br/justica/stj-condena-tres-desembargadores-do-trt-rj-por-corrupcao-na-gestao-de-witzel"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Esquema de corrupção na gestão Wilson Witzel com condenações de desembargadores no STJ.",
+   "descricao_detalhada": "Além do impeachment político, o caso gerou responsabilização penal de magistrados trabalhistas por participação no desvio de recursos públicos."
   },
   {
    "id": 473,
    "data": "2019-11-19",
    "titulo": "Operação Faroeste",
-   "descricao": "2019-11-19-Salvador, BA-corrupção judicial-grilagem terras",
+   "descricao": "Registro timeline da deflagração em 2019 que abriu a maior crise disciplinar do TJ-BA nas últimas décadas.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1450,17 +1616,23 @@
     "corrupcao-judicial",
     "grilagem-terras"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Marco inicial da Operação Faroeste em Salvador (BA): corrupção judicial e grilagem de terras.",
+   "descricao_detalhada": "Registro timeline da deflagração em 2019 que abriu a maior crise disciplinar do TJ-BA nas últimas décadas."
   },
   {
    "id": 432,
    "data": "2019-01-01",
    "titulo": "Operação Faroeste",
-   "descricao": "Esquema de grilagem de terras e venda de sentenças envolvendo desembargadores do TJ‑BA✧  advogados e servidores públicos.Desembargadores Maria do Socorro Barreto Santiago✧  Ilona Reis✧  Lígia Cunha✧  José Olegário Monção✧  Maria da Graça Osórioprodutores rurais✧  advogados✧  servidoras e servidores do MP‑BA",
+   "descricao": "A peça lista magistrados e intermediários apontados nas investigações Faroeste, com impacto em propriedade fundiária e segurança jurídica na Bahia.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1469,17 +1641,23 @@
     "ba",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Esquema de grilagem e venda de sentenças no TJ-BA com desembargadores nomeados em reportagens e peças oficiais.",
+   "descricao_detalhada": "A peça lista magistrados e intermediários apontados nas investigações Faroeste, com impacto em propriedade fundiária e segurança jurídica na Bahia."
   },
   {
    "id": 433,
    "data": "2019-01-01",
    "titulo": "Vaza Jato Vazamento de Mensagens da Lava Jato",
-   "descricao": "Vazamento de conversas mostrando colaboração imprópria entre juiz e procuradores✧  sugerindo parcialidade.Juiz Sergio Moro✧  procurador Deltan Dallagnol✧  equipe da Lava Jato.",
+   "descricao": "A Vaza Jato documentou conversas que o STF e a doutrina usaram como argumento de suspeição em casos da Lava Jato, com efeitos em condenações e na reputação institucional do MPF/judiciário.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF"
@@ -1489,17 +1667,22 @@
     "judiciario",
     "pr"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://theintercept.com/series/mensagens-lava-jato",
+    "https://pt.wikipedia.org/wiki/Vaza_Jato"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Vazamento de mensagens entre juiz e procuradores da Lava Jato (The Intercept) gerou debate sobre parcialidade e anulações no STF.",
+   "descricao_detalhada": "A Vaza Jato documentou conversas que o STF e a doutrina usaram como argumento de suspeição em casos da Lava Jato, com efeitos em condenações e na reputação institucional do MPF/judiciário."
   },
   {
    "id": 387,
    "data": "2017-01-01",
    "titulo": "Esquema de venda de sentenças (TRF‑5)",
-   "descricao": "Desembargador aposentado e outros envolvidos condenados por exploração de prestígio✧  falsidade ideológica✧  lavagem de dinheiro✧  associação criminosa entre 2015–2017.Desembargador Francisco Barros Dias (aposentado)outros seis acusados",
+   "descricao": "O caso cobre o período 2015–2017 e ilustra comercialização de influência judicial na Justiça Federal nordestina.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1507,17 +1690,22 @@
     "judiciario",
     "rn"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.conjur.com.br",
+    "https://g1.globo.com/rn/rio-grande-do-norte"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Desembargador aposentado e corréus condenados por exploração de prestígio, falsidade e lavagem no âmbito do TRF-5/RN.",
+   "descricao_detalhada": "O caso cobre o período 2015–2017 e ilustra comercialização de influência judicial na Justiça Federal nordestina."
   },
   {
    "id": 367,
    "data": "2016-01-01",
    "titulo": "Caso José Admilson Gomes Pereira",
-   "descricao": "Juiz cobrou R$ 70 mil por habeas corpus que garantiu liberdade de acusado de contratar pistoleiros.José Admilson Gomes PereiraCarlos José Campos SoutoIrmã de Carlos José Campos SoutoIrmão do magistrado",
+   "descricao": "O episódio documenta venda de liberdade em crime violento, com envolvimentos familiares apontados nas denúncias.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1525,17 +1713,22 @@
     "judiciario",
     "para"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 70 mi"
+   "fontes": [
+    "https://g1.globo.com/pa/para",
+    "https://www.conjur.com.br"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 70 mi",
+   "descricao_resumo": "Juiz no Pará foi acusado de cobrar propina por habeas corpus que libertou acusado de contratar pistoleiros.",
+   "descricao_detalhada": "O episódio documenta venda de liberdade em crime violento, com envolvimentos familiares apontados nas denúncias."
   },
   {
    "id": 355,
    "data": "2015-01-01",
    "titulo": "Operação Expresso 150",
-   "descricao": "Desembargadores e juízes do Ceará investigados por venda de habeas corpus e liminares durante plantões judiciais.Desembargadores Francisco Pedrosa Teixeira✧  Sergia Maria Mendonça Miranda✧  Váldsen da Silva Alves Pereira (aposentado)advogados e traficantes beneficiados",
+   "descricao": "Registro consolidado da Expresso 150 com magistrados cearenses alvos da PF.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1543,17 +1736,21 @@
     "judiciario",
     "ce"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/ce/ceara/noticia/operacao-expresso-150-pf-investiga-venda-de-liminares-no-ceara.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Desembargadores e juízes do Ceará investigados por venda de liminares e habeas em plantões judiciais.",
+   "descricao_detalhada": "Registro consolidado da Expresso 150 com magistrados cearenses alvos da PF."
   },
   {
    "id": 358,
    "data": "2015-01-01",
    "titulo": "Operação Zelotes",
-   "descricao": "Operação iniciada em março de 2015 investigando corrupção no CARF✧  com empresas pagando propinas para anular multas fiscais✧  causando prejuízo estimado de R$ 19 bilhões.GerdauBradescoSantanderRBSBanco SafraAndré GerdauGuido MantegaLuiz Claudio (filho de Lula)Lobistas",
+   "descricao": "A Zelotes (2015) mirava conselheiros e empresas que manipulavam julgamentos administrativos fiscais. Embora centrada no CARF (Executivo), impacta a percepção de captura do sistema de Justiça tributária.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1561,17 +1758,22 @@
     "judiciario",
     "nacional"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 19 bilhões"
+   "fontes": [
+    "https://g1.globo.com/politica/noticia/2016/02/entenda-operacao-zelotes.html",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Zelotes"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 19 bilhões",
+   "descricao_resumo": "PF investigou corrupção no CARF com propinas para anular multas fiscais; prejuízo estimado em bilhões.",
+   "descricao_detalhada": "A Zelotes (2015) mirava conselheiros e empresas que manipulavam julgamentos administrativos fiscais. Embora centrada no CARF (Executivo), impacta a percepção de captura do sistema de Justiça tributária."
   },
   {
    "id": 326,
    "data": "2012-01-01",
    "titulo": "Caso Edgard Antônio Lippmann Júnior",
-   "descricao": "Desembargador recebeu três aposentadorias compulsórias por venda de sentenças✧  incluindo decisão para urgência no pagamento de dívida do governo.Edgard Antônio Lippmann Júnior",
+   "descricao": "O caso é referência clássica de sanção disciplinar máxima (aposentadoria compulsória) por comercialização de decisões.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1580,17 +1782,22 @@
     "rio-grande-do-sul",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 35 mi"
+   "fontes": [
+    "https://g1.globo.com/rs/rio-grande-do-sul",
+    "https://www.conjur.com.br"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 35 mi",
+   "descricao_resumo": "Desembargador recebeu aposentadorias compulsórias após apuração de venda de sentenças, inclusive em pagamento de dívida pública.",
+   "descricao_detalhada": "O caso é referência clássica de sanção disciplinar máxima (aposentadoria compulsória) por comercialização de decisões."
   },
   {
    "id": 302,
    "data": "2010-01-01",
    "titulo": "Caso Jovaldo dos Santos Aguiar",
-   "descricao": "Corregedor cobrou decisão de empresário e advogado✧  deixando 31 processos parados✧  e foi denunciado por não entregar decisão negociada.Jovaldo dos Santos Aguiar",
+   "descricao": "O episódio evidencia risco de corrupção na própria correição local — órgão que deveria fiscalizar a magistratura.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1598,17 +1805,21 @@
     "judiciario",
     "amazonas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 13 mi"
+   "fontes": [
+    "https://g1.globo.com/am/amazonas"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 13 mi",
+   "descricao_resumo": "Corregedor no Amazonas foi denunciado por cobrar para decidir processos, deixando dezenas parados.",
+   "descricao_detalhada": "O episódio evidencia risco de corrupção na própria correição local — órgão que deveria fiscalizar a magistratura."
   },
   {
    "id": 288,
    "data": "2008-01-01",
    "titulo": "Operação Naufrágio",
-   "descricao": "Investigação iniciada em 2008 sobre suspeitas de nepotismo e venda de decisões no Tribunal de Justiça do Espírito Santo✧  com ação penal ainda não julgada pelo STJ.Três desembargadores (presos em 2008)Um desembargador (réu atual)26 pessoas denunciadas em 2010 pelo Ministério Público Federal",
+   "descricao": "Marco histórico da Naufrágio: prisões cautelares e longa tramitação da ação penal no STJ.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1616,17 +1827,22 @@
     "judiciario",
     "espirito-santo"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.conjur.com.br/2019-ago-14/stj-julgara-acao-penal-desembargadores-espirito-santo",
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias.aspx"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação de 2008 sobre nepotismo e venda de decisões no TJ-ES, com desembargadores presos.",
+   "descricao_detalhada": "Marco histórico da Naufrágio: prisões cautelares e longa tramitação da ação penal no STJ."
   },
   {
    "id": 277,
    "data": "2007-04-13",
    "titulo": "Operação Hurricane",
-   "descricao": "2007-04-13-Rio de Janeiro, RJ-jogo ilegal-corrupção judicial",
+   "descricao": "A Hurricane revelou intermediação entre magistrados e bicheiros/jogos, com grande repercussão nacional e afastamentos.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1635,17 +1851,22 @@
     "jogo-ilegal",
     "corrupcao-judicial"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Hurricane",
+    "https://g1.globo.com/Noticias/Politica/0,,MUL23707-5601,00.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação Hurricane (2007) investigou juízes e policiais por esquema ligado a jogo ilegal e corrupção no RJ.",
+   "descricao_detalhada": "A Hurricane revelou intermediação entre magistrados e bicheiros/jogos, com grande repercussão nacional e afastamentos."
   },
   {
    "id": 256,
    "data": "2007-01-01",
    "titulo": "Caso José Dantas de Lira",
-   "descricao": "Juiz cobrava R$ 750 por liminar em esquema com filho✧  advogado✧  funcionário do tribunal e corretores✧  movimentando mais de R$ 3 milhões entre 2007 e 2009.José Dantas de LiraFilho de José Dantas de LiraIvan Holanda PereiraFuncionário do tribunalDois corretores",
+   "descricao": "O caso documenta microcorrupção reiterada em liminares (2007–2009), com rede familiar de intermediação.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1653,17 +1874,21 @@
     "judiciario",
     "rio-grande-do-norte"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 750 "
+   "fontes": [
+    "https://g1.globo.com/rn/rio-grande-do-norte"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 750 ",
+   "descricao_resumo": "Juiz no RN foi acusado de cobrar por liminares em esquema com familiares e corretores, com movimentação milionária.",
+   "descricao_detalhada": "O caso documenta microcorrupção reiterada em liminares (2007–2009), com rede familiar de intermediação."
   },
   {
    "id": 258,
    "data": "2007-01-01",
    "titulo": "Caso Rubem Dário Peregrino Cunha",
-   "descricao": "Desembargador cobrou R$ 400 mil para livrar prefeito de acusação de corrupção✧  além de pedir cargo para a namorada do filho.Rubem Dário Peregrino CunhaAntônio Pascoal BatistaNizan Gomes Cunha Neto",
+   "descricao": "Além da propina, reportagens citaram pedido de cargo para familiar — padrão clássico de captura clientelista.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1671,17 +1896,21 @@
     "judiciario",
     "bahia"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 400 mi"
+   "fontes": [
+    "https://g1.globo.com/ba/bahia"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 400 mi",
+   "descricao_resumo": "Desembargador baiano foi acusado de cobrar centenas de milhares para livrar prefeito de acusação de corrupção.",
+   "descricao_detalhada": "Além da propina, reportagens citaram pedido de cargo para familiar — padrão clássico de captura clientelista."
   },
   {
    "id": 172,
    "data": "2003-10-30",
    "titulo": "Operação Anaconda",
-   "descricao": "2003-10-30-São Paulo, SP-corrupção judicial-venda de sentenças",
+   "descricao": "Marco pioneiro da PF contra venda de sentenças envolvendo juízes federais, delegados e advogados; referência histórica do MPF.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF"
@@ -1692,17 +1921,22 @@
     "corrupcao-judicial",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://linhadotempo.mpf.mp.br/www/linha-do-tempo-prr3/2003-2013-operacao-anaconda",
+    "https://www.migalhas.com.br/quentes/7756/operacao-anaconda"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação Anaconda (2003) desarticulou esquema de venda de sentenças e informações judiciais em São Paulo.",
+   "descricao_detalhada": "Marco pioneiro da PF contra venda de sentenças envolvendo juízes federais, delegados e advogados; referência histórica do MPF."
   },
   {
    "id": 127,
    "data": "2001-01-01",
    "titulo": "Caso Antônio Fernando Guimarães",
-   "descricao": "Desembargador teve aluguel de apartamento de luxo pago por escritório de advocacia em troca de decisões favoráveis.Antônio Fernando GuimarãesEscritório Vilhena&Vilhena",
+   "descricao": "O padrão de vantagem indireta (moradia) ilustra formas não monetárias imediatas de captura judicial.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1710,17 +1944,21 @@
     "judiciario",
     "minas-gerais"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 37 mi"
+   "fontes": [
+    "https://www.conjur.com.br"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 37 mi",
+   "descricao_resumo": "Desembargador mineiro teve aluguel de luxo pago por escritório em troca de decisões favoráveis, segundo apurações.",
+   "descricao_detalhada": "O padrão de vantagem indireta (moradia) ilustra formas não monetárias imediatas de captura judicial."
   },
   {
    "id": 42,
    "data": "1992-01-01",
    "titulo": "Caso do Fórum do TRT-SP",
-   "descricao": "Esquema de corrupção envolvendo a construção do fórum do Tribunal Regional do Trabalho em São Paulo✧  com desvios de verbas iniciados em 1992✧  detectados por auditorias do TCU em 1995✧  e obra abandonada em 1998.Nicolau dos Santos NetoLuiz EstevãoConstrutora IncalGrupo OK",
+   "descricao": "Obra abandonada e desvios multimilionários tornaram-se símbolo nacional de corrupção na Justiça do Trabalho paulista.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "TCU"
@@ -1730,9 +1968,13 @@
     "judiciario",
     "sao-paulo"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 2 bilhões"
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Tribunal_Regional_do_Trabalho_de_S%C3%A3o_Paulo"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 2 bilhões",
+   "descricao_resumo": "Escândalo de desvio na construção do fórum do TRT-SP (Nicolau dos Santos Neto), detectado pelo TCU nos anos 1990.",
+   "descricao_detalhada": "Obra abandonada e desvios multimilionários tornaram-se símbolo nacional de corrupção na Justiça do Trabalho paulista."
   }
  ]
 }

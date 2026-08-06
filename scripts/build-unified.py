@@ -92,18 +92,27 @@ def normalize_decisoes(raw: dict) -> tuple[list[dict], dict, list]:
         tipo = c.get("tipo") or ""
         tribunal = c.get("tribunal") or ""
         ref = c.get("ref") or ""
+        fontes = [s for s in (c.get("fontes") or []) if s and s != "N/A"]
+        desc = (
+            (c.get("descricao_detalhada") or c.get("descricao_resumo") or "")
+            .strip()
+            or f"{tipo} · {tribunal}. Referência: {ref}".strip()
+        )
+        ev = c.get("evidence_status") or (
+            "ev-confirmed" if fontes else "ev-alleged"
+        )
         card = {
             "id": slug_id("jw", f"{ano}-{tribunal}-{titulo}"),
             "data": f"{ano}-01-01",
             "titulo": titulo,
-            "descricao": f"{tipo} · {tribunal}. Referência: {ref}".strip(),
+            "descricao": desc,
             "grupo": classify_decisao_grupo(tipo, tags),
-            "gravidade": None,
+            "gravidade": c.get("gravidade"),
             "relevancia": "alta" if "foragido" in tags or "pcc" in tags else "media",
             "instituicoes": [tribunal] if tribunal else [],
             "tags": tags,
-            "fontes": [],
-            "evidence_status": "ev-confirmed",
+            "fontes": fontes,
+            "evidence_status": ev,
             "valor_envolvido": None,
             "track": TRACK_DECISOES,
             "crime_tags": crime_tags,
