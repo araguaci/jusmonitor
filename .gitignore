@@ -12,3 +12,5 @@ __pycache__/
 .Python
 .history/
 .firecrawl/
+*.zip
+sync/

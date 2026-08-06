@@ -290,11 +290,12 @@
     "P11",
     "operacao-rejeito"
    ],
-   "fontes": [
-    "Justiça Federal MG; MPF"
-   ],
-   "evidence_status": "ev-confirmed",
-   "valor_envolvido": null
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null,
+   "lacuna_investigativa": "R1/R2 (2026-08-06): fontes[] continha rótulo textual sem URL http(s) (['Justiça Federal MG; MPF']). Rebaixado para ev-alleged até URL verificável.",
+   "promovido_em": "2026-08-06",
+   "promovido_por": "jusmonitor sync — aplicação automática R1/R2"
   },
   {
    "id": 1336,
@@ -417,11 +418,12 @@
     "P06",
     "operacao-rejeito"
    ],
-   "fontes": [
-    "TRF-6; imprensa"
-   ],
-   "evidence_status": "ev-confirmed",
-   "valor_envolvido": null
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null,
+   "lacuna_investigativa": "R1/R2 (2026-08-06): fontes[] continha rótulo textual sem URL http(s) (['TRF-6; imprensa']). Rebaixado para ev-alleged até URL verificável.",
+   "promovido_em": "2026-08-06",
+   "promovido_por": "jusmonitor sync — aplicação automática R1/R2"
   },
   {
    "id": 1437,

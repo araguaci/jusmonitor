@@ -40,7 +40,8 @@ Site estático (HTML/CSS/JS) + JSON em `/data/` + deploy Vercel (`vercel.json`).
 ## Docs
 
 - [Architecture](docs/ARCHITECTURE.md)
-- [Data schema](docs/DATA_SCHEMA.md)
+- [Data schema](docs/DATA_SCHEMA.md) (`1.1.0` — R1–R7)
+- [JSON Schema](docs/schema.json)
 - [Metodologia](docs/METODOLOGIA.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Contribuir](CONTRIBUTING.md)

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -11,6 +12,23 @@ DATA = ROOT / "data"
 
 TRACK_CAPTURA = "captura_institucional"
 TRACK_DECISOES = "decisoes_impacto"
+SCHEMA_VERSION = "1.1.0"
+
+GRUPOS_CAPTURA = {
+    "corrupcao_judicial",
+    "cnj_disciplinar",
+    "penduricalhos",
+    "chokepoint_stf",
+    "eleitoral_tse",
+    "outros_judiciario",
+}
+GRUPOS_DECISOES = {
+    "soltura_hc",
+    "progressao_regime",
+    "arquivamento",
+    "jurisprudencia_estrutural",
+    "foragidos_impacto",
+}
 
 DECISAO_GRUPO_MAP = {
     "HC coletivo": "soltura_hc",
@@ -37,6 +55,15 @@ CRIME_TAGS = {
     "pcc",
 }
 
+CURADORIA_FIELDS = (
+    "lawfare_id",
+    "analise",
+    "lacuna_investigativa",
+    "ponto_de_inflexao",
+    "promovido_em",
+    "promovido_por",
+)
+
 
 def load_json(path: Path):
     with path.open(encoding="utf-8") as f:
@@ -46,6 +73,23 @@ def load_json(path: Path):
 def slug_id(prefix: str, text: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
     return f"{prefix}-{s[:48]}"
+
+
+def is_real_source(s) -> bool:
+    return isinstance(s, str) and s.startswith(("http://", "https://"))
+
+
+def enforce_r1(card: dict, where: str) -> None:
+    """R1: ev-confirmed exige pelo menos 1 URL real em fontes[]."""
+    if card.get("evidence_status") != "ev-confirmed":
+        return
+    fontes = card.get("fontes") or []
+    if not any(is_real_source(f) for f in fontes):
+        cid = card.get("id", "?")
+        raise SystemExit(
+            f"R1 violada em {where} id={cid}: evidence_status=ev-confirmed "
+            f"sem URL http(s) em fontes[]. Rebaixe para ev-alleged ou adicione fonte."
+        )
 
 
 def normalize_captura(raw: dict) -> list[dict]:
@@ -70,6 +114,14 @@ def normalize_captura(raw: dict) -> list[dict]:
             "ref": None,
             "tribunal": None,
         }
+        for key in CURADORIA_FIELDS:
+            if c.get(key) not in (None, ""):
+                card[key] = c.get(key)
+        if card["grupo"] not in GRUPOS_CAPTURA:
+            raise SystemExit(
+                f"grupo '{card['grupo']}' inválido para captura id={card.get('id')}"
+            )
+        enforce_r1(card, "captura")
         cards.append(card)
     return cards
 
@@ -77,51 +129,96 @@ def normalize_captura(raw: dict) -> list[dict]:
 def classify_decisao_grupo(tipo: str, tags: list[str]) -> str:
     if "foragido" in tags:
         return "foragidos_impacto"
-    return DECISAO_GRUPO_MAP.get(tipo or "", "soltura_hc")
+    if tipo in DECISAO_GRUPO_MAP:
+        return DECISAO_GRUPO_MAP[tipo]
+    # prefix match for tipos longos do sync enriquecido
+    for key, grupo in DECISAO_GRUPO_MAP.items():
+        if tipo.startswith(key):
+            return grupo
+    return "soltura_hc"
 
 
-def normalize_decisoes(raw: dict) -> tuple[list[dict], dict, list]:
+def build_decisao_descricao(c: dict, tipo: str, tribunal: str, ref: str) -> str:
+    for key in ("descricao", "descricao_detalhada", "descricao_resumo"):
+        val = (c.get(key) or "").strip()
+        if val:
+            return val
+    parts = []
+    if c.get("analise"):
+        parts.append(str(c["analise"]).strip())
+    if c.get("ponto_de_inflexao"):
+        parts.append("Ponto de inflexão: " + str(c["ponto_de_inflexao"]).strip())
+    if c.get("lacuna_investigativa"):
+        parts.append("Lacuna: " + str(c["lacuna_investigativa"]).strip())
+    if parts:
+        return " ".join(parts)
+    return f"{tipo} · {tribunal}. Referência: {ref}".strip(" ·")
+
+
+def normalize_decisoes(raw: dict) -> tuple[list[dict], dict, list, list, list]:
     stats = raw.get("estatisticas") or {}
     alertas = raw.get("alertas_sistemicos") or []
+    conflitos = raw.get("conflitos_resolvidos") or []
+    divergencias = raw.get("divergencias_nao_reconciliadas") or []
     cards = []
     for i, c in enumerate(raw.get("casos", []), start=1):
-        tags = c.get("tags") or []
-        crime_tags = [t for t in tags if t in CRIME_TAGS]
+        tags = list(c.get("tags") or [])
+        crime_tags = list(c.get("crime_tags") or [])
+        if not crime_tags:
+            crime_tags = [t for t in tags if t in CRIME_TAGS]
         ano = c.get("ano") or 2000
-        titulo = (c.get("nome") or "").strip()
-        tipo = c.get("tipo") or ""
-        tribunal = c.get("tribunal") or ""
+        titulo = (c.get("titulo") or c.get("nome") or "").strip()
+        tipo = (c.get("tipo_decisao") or c.get("tipo") or "").strip()
+        tribunal = (c.get("tribunal") or "").strip()
         ref = c.get("ref") or ""
         fontes = [s for s in (c.get("fontes") or []) if s and s != "N/A"]
-        desc = (
-            (c.get("descricao_detalhada") or c.get("descricao_resumo") or "")
-            .strip()
-            or f"{tipo} · {tribunal}. Referência: {ref}".strip()
-        )
-        ev = c.get("evidence_status") or (
-            "ev-confirmed" if fontes else "ev-alleged"
-        )
+        desc = build_decisao_descricao(c, tipo, tribunal, ref or "")
+
+        if c.get("grupo") in GRUPOS_DECISOES:
+            grupo = c["grupo"]
+        else:
+            grupo = classify_decisao_grupo(tipo, tags + crime_tags)
+
+        ev = c.get("evidence_status")
+        if ev not in ("ev-confirmed", "ev-alleged"):
+            ev = "ev-confirmed" if any(is_real_source(f) for f in fontes) else "ev-alleged"
+
+        card_id = c.get("id") or slug_id("jw", f"{ano}-{tribunal}-{titulo}")
+        data = (c.get("data") or f"{ano}-01-01")[:10]
+
+        relevancia = c.get("relevancia")
+        if not relevancia:
+            pool = set(tags) | set(crime_tags)
+            relevancia = "alta" if ("foragido" in pool or "pcc" in pool) else "media"
+
+        instituicoes = c.get("instituicoes") or ([tribunal] if tribunal else [])
+
         card = {
-            "id": slug_id("jw", f"{ano}-{tribunal}-{titulo}"),
-            "data": f"{ano}-01-01",
+            "id": card_id,
+            "data": data,
             "titulo": titulo,
             "descricao": desc,
-            "grupo": classify_decisao_grupo(tipo, tags),
+            "grupo": grupo,
             "gravidade": c.get("gravidade"),
-            "relevancia": "alta" if "foragido" in tags or "pcc" in tags else "media",
-            "instituicoes": [tribunal] if tribunal else [],
+            "relevancia": relevancia,
+            "instituicoes": instituicoes,
             "tags": tags,
             "fontes": fontes,
             "evidence_status": ev,
-            "valor_envolvido": None,
+            "valor_envolvido": c.get("valor_envolvido"),
             "track": TRACK_DECISOES,
             "crime_tags": crime_tags,
             "tipo_decisao": tipo,
-            "ref": ref,
-            "tribunal": tribunal,
+            "ref": ref if ref else None,
+            "tribunal": tribunal or None,
         }
+        for key in CURADORIA_FIELDS:
+            if c.get(key) not in (None, ""):
+                card[key] = c.get(key)
+
+        enforce_r1(card, "decisoes")
         cards.append(card)
-    return cards, stats, alertas
+    return cards, stats, alertas, conflitos, divergencias
 
 
 def load_contributions() -> list[dict]:
@@ -159,6 +256,7 @@ def load_contributions() -> list[dict]:
             if not item.get("id"):
                 item["id"] = slug_id("contrib", item["titulo"])
             item["_from_contribution"] = path.name
+            enforce_r1(item, path.name)
             out.append(item)
     return out
 
@@ -168,10 +266,19 @@ def build():
     decisoes_raw = load_json(DATA / "decisoes-source.json")
 
     captura_cards = normalize_captura(captura_raw)
-    decisoes_cards, dec_stats, alertas = normalize_decisoes(decisoes_raw)
+    decisoes_cards, dec_stats, alertas, conflitos, divergencias = normalize_decisoes(
+        decisoes_raw
+    )
     contrib_cards = load_contributions()
 
-    # Subset normalizado (captura.json seed original permanece intacto)
+    meta = decisoes_raw.get("_meta") or {}
+    sync_decisoes = (
+        meta.get("generated_at")
+        or meta.get("generated")
+        or meta.get("updated")
+        or "2026-08-06"
+    )
+
     captura_out = {
         "gerado_de": captura_raw.get("gerado_de", "lawfare.json"),
         "sync_date": captura_raw.get("sync_date"),
@@ -186,11 +293,14 @@ def build():
         json.dump(captura_out, f, ensure_ascii=False, indent=1)
 
     decisoes_out = {
-        "gerado_de": "justicawatch-brasil.json (T-209)",
-        "sync_date": (decisoes_raw.get("_meta") or {}).get("generated", "2026-05-28"),
+        "gerado_de": meta.get("gerado_de")
+        or "justicawatch-brasil.json (T-209) / sync reconciliado",
+        "sync_date": sync_decisoes,
         "total": len(decisoes_cards),
         "track": TRACK_DECISOES,
         "estatisticas": dec_stats,
+        "conflitos_resolvidos": conflitos,
+        "divergencias_nao_reconciliadas": divergencias,
         "cards": decisoes_cards,
     }
     with (DATA / "decisoes.json").open("w", encoding="utf-8") as f:
@@ -199,10 +309,10 @@ def build():
     all_cards = captura_cards + decisoes_cards + contrib_cards
     all_cards.sort(key=lambda c: c.get("data") or "", reverse=True)
 
-    sync_date = captura_raw.get("sync_date") or decisoes_out["sync_date"]
+    sync_date = captura_raw.get("sync_date") or sync_decisoes
 
     unified = {
-        "schema_version": "1.0.0",
+        "schema_version": SCHEMA_VERSION,
         "gerado_de": [
             "data/captura.json",
             "data/decisoes-source.json",
@@ -234,6 +344,8 @@ def build():
             ),
         },
         "alertas_sistemicos": alertas,
+        "conflitos_resolvidos": conflitos,
+        "divergencias_nao_reconciliadas": divergencias,
         "cards": all_cards,
     }
 
@@ -241,10 +353,12 @@ def build():
     with out_path.open("w", encoding="utf-8") as f:
         json.dump(unified, f, ensure_ascii=False, indent=1)
 
-    print(f"OK {out_path}")
+    print(f"OK {out_path}", file=sys.stdout)
     print(
-        f"  total={unified['total']} captura={len(captura_cards)} "
-        f"decisoes={len(decisoes_cards)} contrib={len(contrib_cards)}"
+        f"  schema={SCHEMA_VERSION} total={unified['total']} "
+        f"captura={len(captura_cards)} decisoes={len(decisoes_cards)} "
+        f"contrib={len(contrib_cards)} conflitos={len(conflitos)} "
+        f"divergencias={len(divergencias)}"
     )
 
 

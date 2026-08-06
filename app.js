@@ -106,6 +106,17 @@
     return n.toLocaleString("pt-BR");
   }
 
+  function hcStjDisplay() {
+    const divs = raw.divergencias_nao_reconciliadas || [];
+    const d = divs.find(function (x) {
+      return x.indicador === "hc_traficantes_stj_2024";
+    });
+    if (d && d.valor_a && d.valor_b) {
+      return fmtNum(d.valor_a.numero) + " / " + fmtNum(d.valor_b.numero);
+    }
+    return fmtNum((raw.stats || {}).hc_traficantes_stj_2024);
+  }
+
   function renderStats() {
     const s = raw.stats || {};
     const el = document.getElementById("statGrid");
@@ -114,7 +125,7 @@
       [s.captura, "captura institucional", "gold"],
       [s.decisoes, "decisões de impacto", "teal"],
       [s.ev_confirmed, "ev-confirmed", ""],
-      [s.hc_traficantes_stj_2024, "HC tráfico STJ (2024)", "red"],
+      [hcStjDisplay(), "HC tráfico STJ (2024, R4)", "red"],
       [s.foragidos_hc_marco_aurelio_2020, "foragidos via HC (2020)", "red"],
     ];
     el.innerHTML = items
@@ -123,7 +134,7 @@
           '<div class="stat-cell"><span class="stat-num ' +
           (item[2] || "") +
           '">' +
-          fmtNum(item[0]) +
+          (typeof item[0] === "string" ? esc(item[0]) : fmtNum(item[0])) +
           '</span><span class="stat-lbl">' +
           item[1] +
           "</span></div>"
@@ -169,21 +180,24 @@
     const tbody = document.getElementById("dataTableBody");
     const rows = [
       ["Casos captura institucional", s.captura, raw.sync_date, "lawfare-timeline", "Extract JusMonitor"],
-      ["Casos decisões de impacto", s.decisoes, "2005–2025", "T-209 JustiçaWatch", "Sidecar curado"],
-      ["HC traficantes STJ", s.hc_traficantes_stj_2024, "2024", "Dossiê / STJ", "Agregado oficial"],
-      ["HC tráfico STF", s.hc_trafico_stf_2024, "2024", "Dossiê / STF", "Agregado oficial"],
-      ["Taxa reincidência BR", s.taxa_reincidencia_br, "—", "Fontes públicas", "Indicador contextual"],
-      ["População carcerária", s.populacao_carceraria, "2024", "Fontes públicas", "Contexto"],
+      ["Casos decisões de impacto", s.decisoes, "2005–2026", "T-209 JustiçaWatch", "Sidecar reconciliado R1–R7"],
+      ["HC traficantes STJ (R4)", hcStjDisplay(), "2024", "STJ/ConJur × dossiê Seif", "Divergência não reconciliada"],
+      ["HC tráfico STF", s.hc_trafico_stf_2024, "2024", "—", "Pendente (null no sync)"],
+      ["Taxa reincidência BR", s.taxa_reincidencia_br, "—", "—", "Pendente (null no sync)"],
+      ["População carcerária", s.populacao_carceraria, "—", "—", "Pendente (null no sync)"],
       ["Foragidos HC Marco Aurélio", s.foragidos_hc_marco_aurelio_2020, "2020", "Estadão", "Investigação"],
       ["Pendentes enriquecimento", raw.excluidos_pendente_enriquecimento, raw.sync_date, "corpus", "Lacuna de dados"],
+      ["Conflitos resolvidos (R3)", (raw.conflitos_resolvidos || []).length, raw.sync_date, "curadoria", "Ver envelope unified"],
+      ["Divergências abertas (R4)", (raw.divergencias_nao_reconciliadas || []).length, raw.sync_date, "curadoria", "Dois valores exibidos"],
     ];
     tbody.innerHTML = rows
       .map(function (r) {
+        const val = typeof r[1] === "string" ? r[1] : fmtNum(r[1]);
         return (
           "<tr><td>" +
           esc(r[0]) +
           '</td><td class="num-up">' +
-          esc(fmtNum(r[1])) +
+          esc(val) +
           "</td><td>" +
           esc(r[2]) +
           "</td><td>" +
@@ -191,6 +205,40 @@
           "</td><td>" +
           esc(r[4]) +
           "</td></tr>"
+        );
+      })
+      .join("");
+  }
+
+  function renderDivergencias() {
+    const el = document.getElementById("divergenciasBox");
+    if (!el) return;
+    const list = raw.divergencias_nao_reconciliadas || [];
+    if (!list.length) {
+      el.innerHTML =
+        "<p>Nenhuma divergência numérica aberta no envelope atual.</p>";
+      return;
+    }
+    el.innerHTML = list
+      .map(function (d) {
+        const a = d.valor_a || {};
+        const b = d.valor_b || {};
+        return (
+          "<p><strong>" +
+          esc(d.indicador || "indicador") +
+          "</strong> (" +
+          esc(d.regra_aplicada || "R4") +
+          "): " +
+          esc(fmtNum(a.numero)) +
+          " (" +
+          esc(a.fonte || "fonte A") +
+          ") vs " +
+          esc(fmtNum(b.numero)) +
+          " (" +
+          esc(b.fonte || "fonte B") +
+          "). " +
+          esc(d.status || "") +
+          "</p>"
         );
       })
       .join("");
@@ -308,6 +356,8 @@
       c.ref || "",
       c.tribunal || "",
       c.tipo_decisao || "",
+      c.lacuna_investigativa || "",
+      c.id != null ? String(c.id) : "",
     ]
       .join(" ")
       .toLowerCase();
@@ -343,6 +393,9 @@
       : "";
     const refHTML = c.ref
       ? '<div class="card-ref">' + esc(c.ref) + (c.tribunal ? " · " + esc(c.tribunal) : "") + "</div>"
+      : "";
+    const lacunaHTML = c.lacuna_investigativa
+      ? '<div class="card-ref">Lacuna: ' + esc(c.lacuna_investigativa) + "</div>"
       : "";
     const evClass = c.evidence_status === "ev-confirmed" ? "confirmed" : "alleged";
     const trackLabel =
@@ -382,6 +435,7 @@
       "</p>" +
       valorHTML +
       refHTML +
+      lacunaHTML +
       '<div class="card-meta">' +
       tagsHTML +
       "</div>" +
@@ -445,6 +499,7 @@
     renderStats();
     renderAlertas();
     renderDataTable();
+    renderDivergencias();
     renderFilters();
     renderFeed();
     bindFilters();

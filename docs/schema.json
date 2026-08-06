@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jusmonitor.vercel.app/docs/schema.json",
+  "title": "JusMonitor — schema de dados (v1.1.0)",
+  "description": "Formaliza DATA_SCHEMA.md como JSON Schema validável. v1.1.0 adiciona: distinção entre Card (saída normalizada de build-unified.py) e Caso (entrada legada de data/decisoes-source.json), e a regra R1 do cabeçalho _regras_reconciliacao como constraint estrutural — não apenas documentação.",
+
+  "$defs": {
+
+    "evidence_status": {
+      "type": "string",
+      "enum": ["ev-confirmed", "ev-alleged"]
+    },
+
+    "track": {
+      "type": "string",
+      "enum": ["captura_institucional", "decisoes_impacto"]
+    },
+
+    "grupo_captura": {
+      "type": "string",
+      "enum": ["corrupcao_judicial", "cnj_disciplinar", "penduricalhos", "chokepoint_stf", "eleitoral_tse", "outros_judiciario"]
+    },
+
+    "grupo_decisoes": {
+      "type": "string",
+      "enum": ["soltura_hc", "progressao_regime", "arquivamento", "jurisprudencia_estrutural", "foragidos_impacto"]
+    },
+
+    "crime_tag": {
+      "type": "string",
+      "enum": ["trafico", "homicidio", "estupro", "latrocinio", "foragido", "corrupcao", "milicia", "pcc"]
+    },
+
+    "url_or_placeholder": {
+      "description": "URL real, OU string curta explicitamente marcada como não-URL (ex: 'TRF-6; imprensa'). Regra R1 exige pelo menos 1 URL de verdade quando evidence_status=ev-confirmed — ver 'then' abaixo.",
+      "type": "string"
+    },
+
+    "fonte_real": {
+      "type": "string",
+      "pattern": "^https?://",
+      "description": "Só conta como fonte verificável para efeito de R1 se começar com http(s)://. Texto livre tipo 'TRF-6; imprensa' não satisfaz R1, mesmo estando em fontes[]."
+    },
+
+    "curadoria": {
+      "description": "Campos de rastreabilidade da própria curadoria (R5) — opcionais, mas se um existir o outro deveria existir também.",
+      "type": "object",
+      "properties": {
+        "promovido_em": { "type": "string", "format": "date" },
+        "promovido_por": { "type": "string", "minLength": 1 },
+        "analise": { "type": "string", "description": "SEMPRE ev-inference — nunca ev-confirmed/ev-alleged. Nunca em 'descricao'/'titulo'." },
+        "lacuna_investigativa": { "type": "string" },
+        "ponto_de_inflexao": { "type": "string" },
+        "lawfare_id": { "type": ["integer", "null"] }
+      }
+    },
+
+    "card_base": {
+      "type": "object",
+      "required": ["id", "data", "titulo", "track", "grupo", "evidence_status"],
+      "properties": {
+        "id": { "type": ["string", "integer"] },
+        "data": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "titulo": { "type": "string", "minLength": 1 },
+        "descricao": { "type": "string" },
+        "track": { "$ref": "#/$defs/track" },
+        "grupo": { "type": "string" },
+        "evidence_status": { "$ref": "#/$defs/evidence_status" },
+        "fontes": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/url_or_placeholder" },
+          "default": []
+        },
+        "crime_tags": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/crime_tag" },
+          "default": []
+        },
+        "tipo_decisao": { "type": ["string", "null"] },
+        "ref": { "type": ["string", "null"] },
+        "tribunal": { "type": ["string", "null"] },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "instituicoes": { "type": "array", "items": { "type": "string" } },
+        "relevancia": { "type": ["string", "null"] },
+        "gravidade": { "type": ["string", "null"] },
+        "valor_envolvido": { "type": ["string", "null"] }
+      },
+      "allOf": [
+        { "$ref": "#/$defs/curadoria" },
+
+        {
+          "comment": "R1 — hard constraint. ev-confirmed exige >=1 item em fontes[] que seja URL real (http/https). Sem isso, JSON Schema rejeita a instância — não é mais opcional/ad hoc.",
+          "if": { "properties": { "evidence_status": { "const": "ev-confirmed" } } },
+          "then": {
+            "properties": {
+              "fontes": {
+                "type": "array",
+                "contains": { "$ref": "#/$defs/fonte_real" },
+                "minContains": 1
+              }
+            }
+          }
+        },
+
+        {
+          "comment": "grupo deve pertencer ao enum certo conforme o track — evita grupo captura_institucional em card decisoes_impacto e vice-versa.",
+          "if": { "properties": { "track": { "const": "captura_institucional" } } },
+          "then": { "properties": { "grupo": { "$ref": "#/$defs/grupo_captura" } } },
+          "else": {
+            "if": { "properties": { "track": { "const": "decisoes_impacto" } } },
+            "then": { "properties": { "grupo": { "$ref": "#/$defs/grupo_decisoes" } } }
+          }
+        }
+      ]
+    },
+
+    "caso_legado": {
+      "description": "Schema de ENTRADA de data/decisoes-source.json no formato que build-unified.py lê via raw['casos']. NÃO confundir com Card (saída normalizada) — campos diferentes (ano vs data, nome vs titulo).",
+      "type": "object",
+      "required": ["ano", "nome"],
+      "properties": {
+        "id": { "type": "string" },
+        "lawfare_id": { "type": ["integer", "null"] },
+        "ano": { "type": "integer", "minimum": 1988, "maximum": 2100 },
+        "data": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "nome": { "type": "string", "minLength": 1 },
+        "titulo": { "type": "string" },
+        "tipo": { "type": ["string", "null"] },
+        "tipo_decisao": { "type": ["string", "null"] },
+        "tribunal": { "type": ["string", "null"] },
+        "ref": { "type": ["string", "null"] },
+        "grupo": { "$ref": "#/$defs/grupo_decisoes" },
+        "evidence_status": { "$ref": "#/$defs/evidence_status" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "crime_tags": { "type": "array", "items": { "$ref": "#/$defs/crime_tag" } },
+        "fontes": { "type": "array", "items": { "$ref": "#/$defs/url_or_placeholder" } },
+        "instituicoes": { "type": "array", "items": { "type": "string" } },
+        "relevancia": { "type": ["string", "null"] },
+        "gravidade": { "type": ["string", "null"] },
+        "valor_envolvido": { "type": ["string", "null"] },
+        "descricao": { "type": "string" },
+        "descricao_detalhada": { "type": "string" },
+        "descricao_resumo": { "type": "string" }
+      },
+      "allOf": [
+        { "$ref": "#/$defs/curadoria" },
+        {
+          "comment": "Mesma regra R1, aplicada na ENTRADA — falha cedo, antes mesmo de rodar build-unified.py, em vez de só no output.",
+          "if": { "properties": { "evidence_status": { "const": "ev-confirmed" } } },
+          "then": {
+            "properties": {
+              "fontes": {
+                "type": "array",
+                "contains": { "$ref": "#/$defs/fonte_real" },
+                "minContains": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+
+    "divergencia": {
+      "type": "object",
+      "required": ["indicador", "valor_a", "valor_b"],
+      "description": "R4 — divergência numérica entre fontes, nunca resolvida por silêncio.",
+      "properties": {
+        "indicador": { "type": "string" },
+        "regra_aplicada": { "type": "string" },
+        "valor_a": { "type": "object" },
+        "valor_b": { "type": "object" },
+        "status": { "type": "string" }
+      }
+    },
+
+    "conflito_resolvido": {
+      "type": "object",
+      "required": ["evento", "versao_mantida"],
+      "description": "R3 — duplicidade de evento entre seeds, com a resolução registrada.",
+      "properties": {
+        "evento": { "type": "string" },
+        "regra_aplicada": { "type": "string" },
+        "versao_mantida": { "type": "string" },
+        "versao_removida": { "type": "string" }
+      }
+    }
+  },
+
+  "oneOf": [
+    {
+      "title": "unified.json (envelope de saída)",
+      "type": "object",
+      "required": ["schema_version", "total", "cards"],
+      "properties": {
+        "schema_version": { "type": "string" },
+        "sync_date": { "type": ["string", "null"] },
+        "gerado_de": { "type": "array", "items": { "type": "string" } },
+        "licenca": { "type": "string" },
+        "canonical_url": { "type": "string", "format": "uri" },
+        "total": { "type": "integer", "minimum": 0 },
+        "excluidos_pendente_enriquecimento": { "type": "integer", "minimum": 0 },
+        "stats": { "type": "object" },
+        "alertas_sistemicos": { "type": "array" },
+        "divergencias_nao_reconciliadas": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/divergencia" }
+        },
+        "conflitos_resolvidos": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/conflito_resolvido" }
+        },
+        "cards": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/card_base" }
+        }
+      }
+    },
+    {
+      "title": "decisoes-source.json (entrada legada)",
+      "type": "object",
+      "required": ["casos"],
+      "properties": {
+        "_meta": { "type": "object" },
+        "_regras_reconciliacao": { "type": "object" },
+        "estatisticas": { "type": "object" },
+        "alertas_sistemicos": { "type": "array" },
+        "excluidos_pendente_enriquecimento": { "type": "integer" },
+        "conflitos_resolvidos": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/conflito_resolvido" }
+        },
+        "divergencias_nao_reconciliadas": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/divergencia" }
+        },
+        "casos": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/caso_legado" }
+        }
+      }
+    },
+    {
+      "title": "captura.json (entrada, schema Card já normalizado)",
+      "type": "object",
+      "required": ["cards"],
+      "properties": {
+        "gerado_de": {},
+        "sync_date": { "type": ["string", "null"] },
+        "total": { "type": "integer" },
+        "excluidos_pendente_enriquecimento": { "type": "integer" },
+        "cards": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/card_base" }
+        }
+      }
+    }
+  ]
+}

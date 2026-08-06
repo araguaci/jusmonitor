@@ -120,11 +120,14 @@
     </p>
     <h3>Evidência</h3>
     <p>
-      <code>ev-confirmed</code> = fonte jornalística/documental identificada e verificável.
+      <code>ev-confirmed</code> = pelo menos 1 URL verificável em <code>fontes[]</code> (regra R1).
       <code>ev-alleged</code> = entrada ainda sem fonte primária registrada — pendente, nunca tratada como confirmada.
+      Reconciliação R1–R7 em <code>docs/METODOLOGIA.md</code> e contrato em <code>docs/schema.json</code>.
     </p>
     <h3>Lacuna investigativa</h3>
     <p id="lacunaText"></p>
+    <h3>Divergências não reconciliadas</h3>
+    <div id="divergenciasBox"></div>
     <h3>Como atualizar</h3>
     <p>
       Regenerar seeds a partir do corpus e rodar <code>python scripts/build-unified.py</code>.

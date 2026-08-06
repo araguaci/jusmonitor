@@ -35,6 +35,10 @@ def fail(msg: str) -> None:
     sys.exit(1)
 
 
+def is_real_source(s: str) -> bool:
+    return isinstance(s, str) and s.startswith(("http://", "https://"))
+
+
 def validate_card(card: dict, idx: int, where: str) -> None:
     for key in REQUIRED:
         if key not in card or card[key] in (None, ""):
@@ -45,10 +49,38 @@ def validate_card(card: dict, idx: int, where: str) -> None:
         fail(f"{where}[{idx}] invalid evidence_status '{card['evidence_status']}'")
     if card["grupo"] not in ALL_GRUPOS:
         fail(f"{where}[{idx}] invalid grupo '{card['grupo']}'")
+
+    # Checagem cruzada track<->grupo — antes disso, um card captura_institucional
+    # com grupo de decisoes_impacto (ou vice-versa) passava sem erro, porque
+    # ALL_GRUPOS era a união dos dois conjuntos.
+    if card["track"] == "captura_institucional" and card["grupo"] not in GRUPOS_CAPTURA:
+        fail(
+            f"{where}[{idx}] grupo '{card['grupo']}' pertence a decisoes_impacto, "
+            f"mas track é captura_institucional"
+        )
+    if card["track"] == "decisoes_impacto" and card["grupo"] not in GRUPOS_DECISOES:
+        fail(
+            f"{where}[{idx}] grupo '{card['grupo']}' pertence a captura_institucional, "
+            f"mas track é decisoes_impacto"
+        )
+
     if not isinstance(card.get("tags", []), list):
         fail(f"{where}[{idx}] tags must be a list")
     if not isinstance(card.get("fontes", []), list):
         fail(f"{where}[{idx}] fontes must be a list")
+
+    # R1 (ver METODOLOGIA.md: "ev-alleged... pendente, nunca exibida como fato
+    # confirmado" — o inverso implícito é que ev-confirmed EXIGE fonte real).
+    # Esta checagem estava ausente: o script validava que fontes é uma lista,
+    # nunca que ela tem conteúdo. Foi assim que 11/11 cards de decisoes_impacto
+    # foram publicados em 2026-08-05 como ev-confirmed com fontes:[].
+    if card["evidence_status"] == "ev-confirmed":
+        fontes = card.get("fontes", [])
+        if not any(is_real_source(f) for f in fontes):
+            fail(
+                f"{where}[{idx}] evidence_status='ev-confirmed' mas fontes[] não tem "
+                f"nenhuma URL real (http/https). Rebaixe para 'ev-alleged' ou adicione fonte."
+            )
 
 
 def validate_unified(path: Path) -> None:
