@@ -56,7 +56,8 @@ Duas trilhas, um schema (`1.1.0`): `captura_institucional` e `decisoes_impacto`,
 
 | Arquivo | Papel |
 |---------|--------|
-| `index.html` + `app.js` + `styles.css` | UI com filtros e metodologia |
+| `index.html` + `app.js` + `styles.css` | UI com filtros, metodologia, créditos `@artesdosul` e contador de visitas |
+| `CHANGELOG.md` | Histórico de alterações e controle de versão da aplicação |
 | `data/unified.json` | Feed unificado (gerado) |
 | `data/captura.json` | Seed captura (extract lawfare) |
 | `data/decisoes-source.json` | Seed T-209 reconciliado (R1–R7) |
@@ -67,11 +68,12 @@ Duas trilhas, um schema (`1.1.0`): `captura_institucional` e `decisoes_impacto`,
 
 ## 🛡️ Segurança & LGPD (Sentinel-Security Focus)
 > [!IMPORTANT]
-> O painel **não coleta** dados pessoais de visitantes (sem login, sem analytics proprietário obrigatório). Registros tratam de **eventos e decisões públicas** já divulgados em fontes oficiais ou jornalísticas. Apresentar um caso **não implica culpa ou erro** do magistrado — registra impacto público. Contribuições externas passam por curadoria humana antes de entrar no feed. Licença CC0 sobre o corpus publicado.
+> O painel **não coleta** dados pessoais identificáveis de visitantes. O contador de acessos descentralizado em stats.artesdosul.com atua em conformidade com as diretrizes de privacidade e LGPD, sem cookies persistentes ou coleta abusiva. Registros tratam de **eventos e decisões públicas** já divulgados em fontes oficiais ou jornalísticas. Apresentar um caso **não implica culpa ou erro** do magistrado — registra impacto público. Contribuições externas passam por curadoria humana antes de entrar no feed. Licença CC0 sobre o corpus publicado.
 
 ## 🚀 Roadmap de Execução
 - [x] **Fase 1: MVP Estrutural** — site estático, schema unificado, CI validate-data, deploy Vercel
 - [x] **Fase 2: Governança evidencial** — R1–R7, `schema.json`, seed decisões reconciliado, OG image
+- [x] **Versão 1.2.0** — Integração de crédito `@artesdosul`, contador de visitas, versionamento dinâmico e changelog
 - [ ] **Fase 3: Escala editorial** — ampliar corpus HC/progressão, PWA opcional, redirect gosurf → canônico
 - [ ] **Fase 4: Integrações** — sync automatizado com extract lawfare-timeline; auditoria card a card da trilha captura
 

@@ -41,6 +41,16 @@ Assimiladas em `docs/METODOLOGIA.md`, `docs/DATA_SCHEMA.md` e `docs/schema.json`
 - Vercel: root estático, `cleanUrls`, cache 300s em `/data/*`
 - Regenerar JSON no CI local / pré-commit editorial antes do push
 
+## Analytics e Rastreamento
+
+- Contador de visitas descentralizado via `stats.artesdosul.com` integrado de forma transparente (sem armazenamento de cookies persistentes ou dados pessoais / em conformidade com LGPD).
+- Renderização visual automática no footer sob a tag `#ads-counter`.
+
+## Versionamento
+
+- Versão da aplicação gerida e exibida dinamicamente no rodapé (controlado em `index.html` e `app.js`).
+- Histórico de versões mantido no arquivo `CHANGELOG.md` na raiz do projeto.
+
 ## Relação com outros repos
 
 | Repo | Papel |

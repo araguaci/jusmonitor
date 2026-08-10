@@ -492,7 +492,10 @@
   function boot(data) {
     raw = data;
     cards = data.cards || [];
-    document.getElementById("syncDate").textContent = data.sync_date || "—";
+    const syncText = data.sync_date || "—";
+    document.getElementById("syncDate").textContent = syncText;
+    const footerSync = document.getElementById("footer-sync-date");
+    if (footerSync) footerSync.textContent = syncText;
     document.getElementById("lacunaText").textContent =
       (data.excluidos_pendente_enriquecimento || 0) +
       " entradas do corpus de captura correspondem ao escopo temático mas carecem de descrição/fonte estruturada — excluídas do painel até enriquecimento.";

@@ -9,6 +9,9 @@
 - [x] Templates GitHub + CONTRIBUTING + CI validate-data
 - [x] Ponte `lawfare-timeline/_data/justicewatch/`
 - [x] Atualização de links em gosurf / docs bridge
+- [x] Integração de créditos `@artesdosul` e contador de visitas
+- [x] Versionamento dinâmico e data da última coleta no footer
+- [x] Changelog formal (`CHANGELOG.md`)
 
 ## Próximo
 
