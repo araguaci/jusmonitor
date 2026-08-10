@@ -1,0 +1,90 @@
+[
+  {
+    "href": "https://sabor-brazil.vercel.app/",
+    "title": "Sabor Brazil",
+    "description": "Catálogo aberto onde o nome não é a coisa — rotulagem, regulatório, institucional, superfaturamento e correlação.",
+    "icon": "tag",
+    "current": false,
+    "image": "https://sabor-brazil.vercel.app/sabor-brazil-hero.webp"
+  },
+  {
+    "href": "https://serie-demografica.vercel.app/",
+    "title": "Série Demográfica",
+    "description": "Observatório de mortalidade 2014–2025 — SIM/DATASUS, Registro Civil, dengue, gripe, câncer e miocardite.",
+    "icon": "chart",
+    "current": false,
+    "image": "https://serie-demografica.vercel.app/artigos/serie-demografica-mortalidade-hero.webp"
+  },
+  {
+    "href": "https://vitimas-do-estado.vercel.app/",
+    "title": "Vítimas do Estado",
+    "description": "Registro open-source de falha estatal com dano irreversível — JSON versionado, taxonomia e painel público.",
+    "icon": "scale",
+    "current": false,
+    "image": "https://vitimas-do-estado.vercel.app/vitimas-do-estado-og.webp"
+  },
+  {
+    "href": "https://lawfare-timeline.vercel.app/",
+    "title": "Lawfare Timeline",
+    "description": "Linha do tempo investigativa de lawfare com fonte auditável.",
+    "icon": "scroll",
+    "current": false,
+    "image": "https://lawfare-timeline.vercel.app/artigos/lawfare-timeline-projeto-xarticle-hero.webp"
+  },
+  {
+    "href": "https://jusmonitor.vercel.app/",
+    "title": "JusMonitor",
+    "description": "Painel open-source de captura institucional do Judiciário e decisões de alto impacto — evidência R1–R7, fontes URL e corpus CC0.",
+    "icon": "gavel",
+    "current": true,
+    "image": "https://jusmonitor.vercel.app/og-jusmonitor.webp"
+  },
+  {
+    "href": "https://republica-sequestrada-hub.vercel.app/",
+    "title": "República Sequestrada",
+    "description": "A extração não muda de lado. Muda de nome.",
+    "icon": "landmark",
+    "current": false,
+    "image": "https://republica-sequestrada-hub.vercel.app/republica-sequestrada-hub-og.webp"
+  },
+  {
+    "href": "https://observatorio-civil-br.vercel.app/",
+    "title": "Observatório Civil BR",
+    "description": "Hub investigativo open-source — 225+ artefatos, padrões P01–P11 e fontes públicas verificáveis (crime, corrupção, lawfare).",
+    "icon": "search",
+    "current": false,
+    "image": "https://observatorio-civil-br.vercel.app/og-image.webp"
+  },
+  {
+    "href": "https://gosurf.site",
+    "title": "GoSurf",
+    "description": "Publicação de análises, dossiês investigativos e insights sobre Brasil, geopolítica, crime organizado, lawfare e economia.",
+    "icon": "globe",
+    "current": false,
+    "image": "https://gosurf.site/gosurf-insights-central-hero-xarticle.webp"
+  },
+  {
+    "href": "https://geoengenharia.vercel.app/",
+    "title": "Geoengenharia",
+    "description": "Patentes, linha do tempo e análises sobre modificação climática, vigilância e full-spectrum dominance.",
+    "icon": "cloud",
+    "current": false,
+    "image": "https://geoengenharia.vercel.app/artigos/geoengenharia-portal-vigilancia-xarticle-hero.webp"
+  },
+  {
+    "href": "https://odragaoeaonca.vercel.app/",
+    "title": "O Dragão e a Onça",
+    "description": "Série Brasil × China: dossiês, timelines e X Articles sobre soberania, minerais e capítulos estaduais.",
+    "icon": "dragon",
+    "current": false,
+    "image": "https://odragaoeaonca.vercel.app/dragao-onca.webp"
+  },
+  {
+    "href": "https://abusosupremo.vercel.app/",
+    "title": "Abuso Supremo",
+    "description": "Censura no Brasil (2019–2025): documentação e cronologia do regime de restrições.",
+    "icon": "shield",
+    "current": false,
+    "image": "https://abusosupremo.vercel.app/censura.png"
+  }
+]
