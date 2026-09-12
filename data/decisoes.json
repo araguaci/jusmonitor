@@ -2,17 +2,23 @@
  "gerado_de": [
   "lawfare.json (corpus lawfare-timeline)",
   "producao jusmonitor data/decisoes-source.json (sync_date 2026-08-05)",
-  "verificacao web direta claude.ai (2026-08-06)"
+  "verificacao web direta claude.ai (2026-08-06)",
+  "justicawatch-brasil.json (lawfare-timeline, updated 2026-09-12)"
  ],
- "sync_date": "2026-08-06",
- "total": 17,
+ "sync_date": "2026-09-12",
+ "total": 19,
  "track": "decisoes_impacto",
  "estatisticas": {
   "hc_traficantes_stj_2024": null,
-  "hc_trafico_stf_2024": null,
-  "taxa_reincidencia_br": null,
-  "populacao_carceraria": null,
-  "foragidos_hc_marco_aurelio_2020": 21
+  "hc_stj_2024_conjur": 10127,
+  "hc_stj_2024_privilegiado": 1578,
+  "hc_stj_2024_concessoes_total": 20114,
+  "hc_trafico_stf_2024": 577,
+  "taxa_reincidencia_br": "42%",
+  "populacao_carceraria": 834000,
+  "foragidos_hc_marco_aurelio_2020": 21,
+  "casos_ancora": 19,
+  "hc_stj_2024_nota": "9.166 (dossiê Seif) e 10.127 (ConJur/STJ, HC+RHC até 26/dez/2024, 49,1% de 20.114 concessões). 1.578 para tráfico privilegiado. Metodologias distintas — não colapsar."
  },
  "conflitos_resolvidos": [
   {
@@ -35,229 +41,85 @@
     "numero": 9166,
     "fonte": "Dossiê parlamentar Sen. Jorge Seif ('Ascensão do Narcoestado do Brasil', 2025), metodologia própria não publicada integralmente"
    },
-   "status": "não reconciliado — produção usava apenas valor_b em stats.hc_traficantes_stj_2024; corrigir para exibir ambos"
+   "status": "não reconciliado — exibir valor_a (10.127 ConJur/STJ) e valor_b (9.166 Seif); ver também stats.hc_stj_2024_privilegiado=1578 e concessoes_total=20114"
   }
  ],
  "cards": [
   {
-   "id": "DI-001",
-   "data": "2021-06-01",
-   "titulo": "STJ (3ª Seção) fixa em EREsp 1.887.511 que quantidade de droga não afasta, por si só, tráfico privilegiado",
-   "descricao": "Origem doutrinária do mecanismo P01-B. Base jurisprudencial para os casos DI-002/003/004.",
-   "grupo": "jurisprudencia_estrutural",
+   "id": "DI-010",
+   "data": "2026-08-01",
+   "titulo": "Karen Tanaka ('Japa do PCC') — Justiça de SP revoga tornozeleira em investigação de R$ 35 mi",
+   "descricao": "Cautelar 2026: revogação de tornozeleira após >2 anos sem denúncia — risco de pena antecipada. Cluster com DI-009 (Oruam).",
+   "grupo": "foragidos_impacto",
    "gravidade": null,
    "relevancia": "alta",
    "instituicoes": [
-    "STJ",
-    "STF"
-   ],
-   "tags": [
-    "P01",
-    "P01-B"
-   ],
-   "fontes": [
-    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/18072022-E-possivel-valorar-quantidade-e-natureza-da-droga-tanto-para-fixar-pena-base-quanto-para-modular-diminuicao-.aspx"
-   ],
-   "evidence_status": "ev-confirmed",
-   "valor_envolvido": null,
-   "track": "decisoes_impacto",
-   "crime_tags": [
-    "trafico"
-   ],
-   "tipo_decisao": "Embargos de divergência — fixação de entendimento vinculante (3ª Seção)",
-   "ref": null,
-   "tribunal": "STJ",
-   "lawfare_id": 1804,
-   "analise": "Origem doutrinária do mecanismo P01-B. Base jurisprudencial para os casos DI-002/003/004."
-  },
-  {
-   "id": "DI-002",
-   "data": "2022-09-26",
-   "titulo": "STJ mantém, por unanimidade, liberdade de motorista preso com 311kg de cocaína em Goiás",
-   "descricao": "Agravo regimental — manutenção de revogação de prisão preventiva · STJ. Referência:",
-   "grupo": "soltura_hc",
-   "gravidade": null,
-   "relevancia": "alta",
-   "instituicoes": [
-    "STJ",
-    "Ministério Público de Goiás"
-   ],
-   "tags": [
-    "P01-B"
-   ],
-   "fontes": [
-    "https://www.conjur.com.br/2022-set-26/stj-mantem-liberdade-acusado-transportar-311-kg-cocaina/",
-    "https://vadenews.com.br/6a-turma-do-stj-mantem-liberdade-de-acusado-de-transportar-311-kg-de-cocaina/"
-   ],
-   "evidence_status": "ev-confirmed",
-   "valor_envolvido": "R$50 mil (pagamento confessado ao motorista)",
-   "track": "decisoes_impacto",
-   "crime_tags": [
-    "trafico"
-   ],
-   "tipo_decisao": "Agravo regimental — manutenção de revogação de prisão preventiva",
-   "ref": null,
-   "tribunal": "STJ",
-   "lawfare_id": 1805,
-   "promovido_em": "2026-08-06",
-   "promovido_por": "claude.ai — fonte localizada durante checagem da regra R1 (autofiscalização do arquivo)."
-  },
-  {
-   "id": "DI-003",
-   "data": "2023-06-01",
-   "titulo": "STF (2ª Turma) anula apreensão de 695kg de cocaína no Porto de Itaguaí por vício de fundada suspeita",
-   "descricao": "Vence conflito com a versão de produção (dossiê Seif) por R3 — ver conflitos_resolvidos.",
-   "grupo": "soltura_hc",
-   "gravidade": null,
-   "relevancia": "alta",
-   "instituicoes": [
-    "STF",
-    "Polícia Federal"
-   ],
-   "tags": [
-    "P01-B"
-   ],
-   "fontes": [
-    "https://www.mpf.mp.br/pgr/noticias-pgr2/2023/stj-afasta-reducao-de-pena-em-caso-de-traficante-preso-com-grande-quantidade-de-droga"
-   ],
-   "evidence_status": "ev-confirmed",
-   "valor_envolvido": null,
-   "track": "decisoes_impacto",
-   "crime_tags": [
-    "trafico"
-   ],
-   "tipo_decisao": "Anulação de apreensão por vício processual (art. 240 §2º CPP)",
-   "ref": null,
-   "tribunal": "STF",
-   "lawfare_id": 1806,
-   "analise": "Vence conflito com a versão de produção (dossiê Seif) por R3 — ver conflitos_resolvidos."
-  },
-  {
-   "id": "DI-004",
-   "data": "2024-10-30",
-   "titulo": "STJ concede liberdade a motorista flagrado com 832kg de cocaína entre Paraná e São Paulo",
-   "descricao": "Terceira reversão na cadeia: soltura em custódia → prisão restabelecida pelo TJSP → soltura definitiva pelo STJ.",
-   "grupo": "soltura_hc",
-   "gravidade": null,
-   "relevancia": "alta",
-   "instituicoes": [
-    "STJ",
     "TJSP"
    ],
    "tags": [
-    "P01-B"
-   ],
-   "fontes": [
-    "https://revistaoeste.com/brasil/stj-concede-liberdade-a-traficante-que-transportava-832-kg-de-cocaina/",
-    "https://diariodopoder.com.br/brasil-e-regioes/csa-brasil/stj-solta-traficante-preso-com-832-kg-de-cocaina-gravidade-insuficiente"
-   ],
-   "evidence_status": "ev-confirmed",
-   "valor_envolvido": "~R$50 milhões (estimativa policial da carga)",
-   "track": "decisoes_impacto",
-   "crime_tags": [
+    "pcc",
+    "lavagem-de-dinheiro",
     "trafico"
    ],
-   "tipo_decisao": "Liminar em habeas corpus — revogação de prisão preventiva",
-   "ref": null,
-   "tribunal": "STJ",
-   "lawfare_id": 1807,
-   "analise": "Terceira reversão na cadeia: soltura em custódia → prisão restabelecida pelo TJSP → soltura definitiva pelo STJ."
+   "fontes": [
+    "https://www.metropoles.com/distrito-federal/na-mira/justica-de-sp-revoga-uso-de-tornozeleira-eletronica-de-japa-do-pcc",
+    "https://bhaz.com.br/primeiramao/justica-revoga-tornozeleira-e-recolhimento-noturno-da-japa-do-pcc/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 35.000.000,00 (investigação de lavagem)",
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico",
+    "pcc"
+   ],
+   "tipo_decisao": "Revogação de medida cautelar",
+   "ref": "Vara Estadual das Garantias de Orcrim e Lavagem/SP — juíza Paula Regina Schempf Cattan, 01/ago/2026",
+   "tribunal": "TJSP",
+   "lawfare_id": 1799,
+   "analise": "Cautelar 2026: revogação de tornozeleira após >2 anos sem denúncia — risco de pena antecipada. Cluster com DI-009 (Oruam).",
+   "promovido_em": "2026-09-12",
+   "promovido_por": "jusmonitor sync — ingestão justicawatch-brasil.json id_corpus 1799"
   },
   {
-   "id": "DI-005",
-   "data": "2024-12-26",
-   "titulo": "STJ concede ~10.127 HCs/RHCs a acusados de tráfico em 2024 — quase metade de todas as concessões do tribunal",
-   "descricao": "Lacuna: Ver divergencias_nao_reconciliadas — número oficial STJ (10.127) vs. dossiê Seif (9.166), aplicação de R4.",
-   "grupo": "jurisprudencia_estrutural",
+   "id": "DI-009",
+   "data": "2026-07-31",
+   "titulo": "Justiça do Rio revoga prisão preventiva de Oruam por tentativa de homicídio, mas rapper permanece foragido por mandado distinto de lavagem de dinheiro",
+   "descricao": "A juíza desclassificou a conduta para lesões e infrações com pena máxima inferior a 4 anos. Mandado distinto de lavagem de dinheiro segue ativo. Checagem em fontes independentes (CNN, SBT, Band, Portal Tela, Metrópoles) corrige a leitura de que ele 'deixou de ser foragido'.",
+   "grupo": "foragidos_impacto",
    "gravidade": null,
    "relevancia": "alta",
    "instituicoes": [
-    "STJ"
+    "TJRJ",
+    "Ministério Público do Rio de Janeiro"
    ],
    "tags": [
-    "P01-B"
+    "desclassificacao-penal",
+    "medida-cautelar",
+    "homicidio",
+    "foragido",
+    "lavagem-de-dinheiro"
    ],
    "fontes": [
-    "https://www.conjur.com.br/2025-jan-07/stj-concedeu-15-mil-hcs-para-aplicar-jurisprudencia-de-trafico-privilegiado-em-2024/",
-    "https://www.gazetadopovo.com.br/republica/dossie-de-senador-diz-que-stj-concedeu-9-mil-habeas-corpus-a-traficantes-em-2024/"
+    "https://www.cnnbrasil.com.br/nacional/sudeste/rj/justica-do-rio-revoga-prisao-de-oruam-por-tentativa-de-homicidio/",
+    "https://www.metropoles.com/colunas/mirelle-pinheiro/entenda-por-que-oruam-teve-a-prisao-preventiva-revogada-pela-justica",
+    "https://www.portaltela.com/brasil/2026/08/01/justica-revoga-prisao-preventiva-de-oruam-mas-rapper-segue-foragido/",
+    "https://sbtnews.sbt.com.br/noticia/brasil/tribunal-de-justica-do-rj-revoga-prisao-de-oruam"
    ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
    "crime_tags": [
-    "trafico"
+    "homicidio",
+    "foragido"
    ],
-   "tipo_decisao": "Estatística agregada — levantamento institucional do próprio STJ",
-   "ref": null,
-   "tribunal": "STJ",
-   "lawfare_id": 1808,
-   "lacuna_investigativa": "Ver divergencias_nao_reconciliadas — número oficial STJ (10.127) vs. dossiê Seif (9.166), aplicação de R4."
-  },
-  {
-   "id": "DI-006",
-   "data": "2023-09-11",
-   "titulo": "[CASO DE CONTROLE] STJ nega tráfico privilegiado a réu preso com 110kg de maconha — recurso do MPF provido",
-   "descricao": "Obrigatório por R7 — demonstra que P01-B não é absoluto.",
-   "grupo": "jurisprudencia_estrutural",
-   "gravidade": null,
-   "relevancia": "alta",
-   "instituicoes": [
-    "STJ",
-    "MPF"
-   ],
-   "tags": [
-    "P01-B",
-    "caso_controle"
-   ],
-   "fontes": [
-    "https://www.mpf.mp.br/pgr/noticias-pgr2/2023/stj-afasta-reducao-de-pena-em-caso-de-traficante-preso-com-grande-quantidade-de-droga"
-   ],
-   "evidence_status": "ev-confirmed",
-   "valor_envolvido": null,
-   "track": "decisoes_impacto",
-   "crime_tags": [
-    "trafico"
-   ],
-   "tipo_decisao": "Recurso do MPF provido — reversão em sentido oposto ao padrão",
-   "ref": null,
-   "tribunal": "STJ",
-   "lawfare_id": 1809,
-   "analise": "Obrigatório por R7 — demonstra que P01-B não é absoluto."
-  },
-  {
-   "id": "DI-007",
-   "data": "2026-02-01",
-   "titulo": "TJMG absolve estuprador de menina de 12 anos alegando 'vínculo afetivo consensual' — acórdão usou IA como suporte",
-   "descricao": "Ponto de inflexão: Réu tinha passagem anterior por homicídio. Lacuna: Desdobramento (CNJ afasta o desembargador-relator) pertence ao track captura_institucional (id 1336, já mesclado em produção).",
-   "grupo": "jurisprudencia_estrutural",
-   "gravidade": null,
-   "relevancia": "alta",
-   "instituicoes": [
-    "TJMG",
-    "CNJ"
-   ],
-   "tags": [
-    "justica",
-    "crianca",
-    "estupro-de-vulneravel",
-    "impunidade"
-   ],
-   "fontes": [
-    "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-02/estupro-de-vulneravel-decisao-do-tjmg-abre-precedente-perigoso",
-    "https://diariodonordeste.verdesmares.com.br/ultima-hora/pais/desembargador-do-tjmg-usa-ia-em-absolvicao-do-caso-de-estupro-de-crianca-de-12-anos-1.3745512"
-   ],
-   "evidence_status": "ev-confirmed",
-   "valor_envolvido": null,
-   "track": "decisoes_impacto",
-   "crime_tags": [
-    "estupro"
-   ],
-   "tipo_decisao": "Absolvição em 2ª instância por maioria (2x1)",
-   "ref": null,
-   "tribunal": "TJMG",
-   "lawfare_id": 1333,
-   "lacuna_investigativa": "Desdobramento (CNJ afasta o desembargador-relator) pertence ao track captura_institucional (id 1336, já mesclado em produção).",
-   "ponto_de_inflexao": "Réu tinha passagem anterior por homicídio."
+   "tipo_decisao": "Revogação de preventiva",
+   "ref": "3ª Vara Criminal do Rio — juíza Tula Corrêa de Mello, 31/jul/2026",
+   "tribunal": "TJRJ",
+   "lawfare_id": 1798,
+   "lacuna_investigativa": "HC sobre mandado remanescente (lavagem) julgado em 12/08/2026 — atualizar quando decidido.",
+   "ponto_de_inflexao": "Desclassificação de dupla tentativa de homicídio para lesão corporal leve — pena máxima abaixo do limiar de custódia cautelar.",
+   "promovido_em": "2026-09-12",
+   "promovido_por": "jusmonitor sync — merge metadados justicawatch-brasil.json (1798) sem novo card"
   },
   {
    "id": "DI-008",
@@ -296,163 +158,310 @@
    "lacuna_investigativa": "Mandantes (Gongorra Castilho, Diego dos Santos Amaral) e olheiro (Kauê do Amaral Coelho) seguem foragidos — status não atualizado nesta entrada."
   },
   {
-   "id": "DI-009",
-   "data": "2026-07-31",
-   "titulo": "Justiça do Rio revoga prisão preventiva de Oruam por tentativa de homicídio, mas rapper permanece foragido por mandado distinto de lavagem de dinheiro",
-   "descricao": "Ponto de inflexão: Desclassificação de dupla tentativa de homicídio para lesão corporal leve — pena máxima abaixo do limiar de custódia cautelar. Lacuna: HC sobre mandado remanescente (lavagem) julgado em 12/08/2026 — atualizar quando decidido.",
-   "grupo": "foragidos_impacto",
+   "id": "DI-007",
+   "data": "2026-02-01",
+   "titulo": "TJMG absolve estuprador de menina de 12 anos alegando 'vínculo afetivo consensual' — acórdão usou IA como suporte",
+   "descricao": "Ponto de inflexão: Réu tinha passagem anterior por homicídio. Lacuna: Desdobramento (CNJ afasta o desembargador-relator) pertence ao track captura_institucional (id 1336, já mesclado em produção).",
+   "grupo": "jurisprudencia_estrutural",
    "gravidade": null,
    "relevancia": "alta",
    "instituicoes": [
-    "TJRJ",
-    "Ministério Público do Rio de Janeiro"
+    "TJMG",
+    "CNJ"
    ],
    "tags": [
-    "desclassificacao-penal",
-    "medida-cautelar"
+    "justica",
+    "crianca",
+    "estupro-de-vulneravel",
+    "impunidade"
    ],
    "fontes": [
-    "https://www.cnnbrasil.com.br/nacional/sudeste/rj/justica-do-rio-revoga-prisao-de-oruam-por-tentativa-de-homicidio/",
-    "https://www.metropoles.com/colunas/mirelle-pinheiro/entenda-por-que-oruam-teve-a-prisao-preventiva-revogada-pela-justica"
+    "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-02/estupro-de-vulneravel-decisao-do-tjmg-abre-precedente-perigoso",
+    "https://diariodonordeste.verdesmares.com.br/ultima-hora/pais/desembargador-do-tjmg-usa-ia-em-absolvicao-do-caso-de-estupro-de-crianca-de-12-anos-1.3745512"
    ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
    "crime_tags": [
-    "homicidio"
+    "estupro"
    ],
-   "tipo_decisao": "Revogação de prisão preventiva com desclassificação penal",
+   "tipo_decisao": "Absolvição em 2ª instância por maioria (2x1)",
    "ref": null,
-   "tribunal": "TJRJ (3ª Vara Criminal)",
-   "lawfare_id": 1798,
-   "lacuna_investigativa": "HC sobre mandado remanescente (lavagem) julgado em 12/08/2026 — atualizar quando decidido.",
-   "ponto_de_inflexao": "Desclassificação de dupla tentativa de homicídio para lesão corporal leve — pena máxima abaixo do limiar de custódia cautelar."
+   "tribunal": "TJMG",
+   "lawfare_id": 1333,
+   "lacuna_investigativa": "Desdobramento (CNJ afasta o desembargador-relator) pertence ao track captura_institucional (id 1336, já mesclado em produção).",
+   "ponto_de_inflexao": "Réu tinha passagem anterior por homicídio."
   },
   {
-   "id": "JW-010",
-   "data": "2006-01-01",
-   "titulo": "STF fixa em HC 82.959-7/SP que a vedação legal de progressão de regime para crimes hediondos é inconstitucional",
-   "descricao": "Marco jurisprudencial fundador do debate sobre progressão em crimes hediondos — origem histórica do cluster de decisões de impacto neste sidecar.",
+   "id": "JW-017",
+   "data": "2025-10-01",
+   "titulo": "Estupro de vulnerável afastado por 'erro de proibição' (STJ, 5ª Turma)",
+   "descricao": "Lacuna: NÃO verificado nesta sessão — nenhum acórdão localizado com esses termos exatos. Risco de conflação com DI-007 (TJMG, fev/2026, 'vínculo afetivo consensual') — tribunal, data e tese diferentes; tratar como caso distinto até confirmação, ou remover se não confirmado em próxima sessão. R1 aplicada: mantido ev-alleged.",
+   "grupo": "jurisprudencia_estrutural",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STJ"
+   ],
+   "tags": [
+    "estupro"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "estupro"
+   ],
+   "tipo_decisao": "Distinguishing jurisprudencial",
+   "ref": "STJ 5ª Turma, out/2025",
+   "tribunal": "STJ",
+   "lacuna_investigativa": "NÃO verificado nesta sessão — nenhum acórdão localizado com esses termos exatos. Risco de conflação com DI-007 (TJMG, fev/2026, 'vínculo afetivo consensual') — tribunal, data e tese diferentes; tratar como caso distinto até confirmação, ou remover se não confirmado em próxima sessão. R1 aplicada: mantido ev-alleged."
+  },
+  {
+   "id": "DI-005",
+   "data": "2024-12-26",
+   "titulo": "STJ concede ~10.127 HCs/RHCs a acusados de tráfico em 2024 — quase metade de todas as concessões do tribunal",
+   "descricao": "Lacuna: Ver divergencias_nao_reconciliadas — número oficial STJ (10.127) vs. dossiê Seif (9.166), aplicação de R4.",
+   "grupo": "jurisprudencia_estrutural",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STJ"
+   ],
+   "tags": [
+    "P01-B"
+   ],
+   "fontes": [
+    "https://www.conjur.com.br/2025-jan-07/stj-concedeu-15-mil-hcs-para-aplicar-jurisprudencia-de-trafico-privilegiado-em-2024/",
+    "https://www.gazetadopovo.com.br/republica/dossie-de-senador-diz-que-stj-concedeu-9-mil-habeas-corpus-a-traficantes-em-2024/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico"
+   ],
+   "tipo_decisao": "Estatística agregada — levantamento institucional do próprio STJ",
+   "ref": null,
+   "tribunal": "STJ",
+   "lawfare_id": 1808,
+   "lacuna_investigativa": "Ver divergencias_nao_reconciliadas — número oficial STJ (10.127) vs. dossiê Seif (9.166), aplicação de R4."
+  },
+  {
+   "id": "DI-004",
+   "data": "2024-10-30",
+   "titulo": "STJ concede liberdade a motorista flagrado com 832kg de cocaína entre Paraná e São Paulo",
+   "descricao": "Terceira reversão na cadeia: soltura em custódia → prisão restabelecida pelo TJSP → soltura definitiva pelo STJ.",
    "grupo": "soltura_hc",
    "gravidade": null,
    "relevancia": "alta",
    "instituicoes": [
+    "STJ",
+    "TJSP"
+   ],
+   "tags": [
+    "P01-B"
+   ],
+   "fontes": [
+    "https://revistaoeste.com/brasil/stj-concede-liberdade-a-traficante-que-transportava-832-kg-de-cocaina/",
+    "https://diariodopoder.com.br/brasil-e-regioes/csa-brasil/stj-solta-traficante-preso-com-832-kg-de-cocaina-gravidade-insuficiente"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "~R$50 milhões (estimativa policial da carga)",
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico"
+   ],
+   "tipo_decisao": "Liminar em habeas corpus — revogação de prisão preventiva",
+   "ref": null,
+   "tribunal": "STJ",
+   "lawfare_id": 1807,
+   "analise": "Terceira reversão na cadeia: soltura em custódia → prisão restabelecida pelo TJSP → soltura definitiva pelo STJ."
+  },
+  {
+   "id": "DI-006",
+   "data": "2023-09-11",
+   "titulo": "[CASO DE CONTROLE] STJ nega tráfico privilegiado a réu preso com 110kg de maconha — recurso do MPF provido",
+   "descricao": "Obrigatório por R7 — demonstra que P01-B não é absoluto.",
+   "grupo": "jurisprudencia_estrutural",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STJ",
+    "MPF"
+   ],
+   "tags": [
+    "P01-B",
+    "caso_controle"
+   ],
+   "fontes": [
+    "https://www.mpf.mp.br/pgr/noticias-pgr2/2023/stj-afasta-reducao-de-pena-em-caso-de-traficante-preso-com-grande-quantidade-de-droga"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico"
+   ],
+   "tipo_decisao": "Recurso do MPF provido — reversão em sentido oposto ao padrão",
+   "ref": null,
+   "tribunal": "STJ",
+   "lawfare_id": 1809,
+   "analise": "Obrigatório por R7 — demonstra que P01-B não é absoluto."
+  },
+  {
+   "id": "DI-003",
+   "data": "2023-06-01",
+   "titulo": "STF (2ª Turma) anula apreensão de 695kg de cocaína no Porto de Itaguaí por vício de fundada suspeita",
+   "descricao": "Vence conflito com a versão de produção (dossiê Seif) por R3 — ver conflitos_resolvidos.",
+   "grupo": "soltura_hc",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Polícia Federal"
+   ],
+   "tags": [
+    "P01-B"
+   ],
+   "fontes": [
+    "https://www.mpf.mp.br/pgr/noticias-pgr2/2023/stj-afasta-reducao-de-pena-em-caso-de-traficante-preso-com-grande-quantidade-de-droga"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico"
+   ],
+   "tipo_decisao": "Anulação de apreensão por vício processual (art. 240 §2º CPP)",
+   "ref": null,
+   "tribunal": "STF",
+   "lawfare_id": 1806,
+   "analise": "Vence conflito com a versão de produção (dossiê Seif) por R3 — ver conflitos_resolvidos."
+  },
+  {
+   "id": "DI-002",
+   "data": "2022-09-26",
+   "titulo": "STJ mantém, por unanimidade, liberdade de motorista preso com 311kg de cocaína em Goiás",
+   "descricao": "Agravo regimental — manutenção de revogação de prisão preventiva · STJ. Referência:",
+   "grupo": "soltura_hc",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STJ",
+    "Ministério Público de Goiás"
+   ],
+   "tags": [
+    "P01-B"
+   ],
+   "fontes": [
+    "https://www.conjur.com.br/2022-set-26/stj-mantem-liberdade-acusado-transportar-311-kg-cocaina/",
+    "https://vadenews.com.br/6a-turma-do-stj-mantem-liberdade-de-acusado-de-transportar-311-kg-de-cocaina/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$50 mil (pagamento confessado ao motorista)",
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico"
+   ],
+   "tipo_decisao": "Agravo regimental — manutenção de revogação de prisão preventiva",
+   "ref": null,
+   "tribunal": "STJ",
+   "lawfare_id": 1805,
+   "promovido_em": "2026-08-06",
+   "promovido_por": "claude.ai — fonte localizada durante checagem da regra R1 (autofiscalização do arquivo)."
+  },
+  {
+   "id": "JW-015",
+   "data": "2022-04-20",
+   "titulo": "STJ (6ª Turma) fixa que busca pessoal sem fundada suspeita objetiva é ilegal — provas decorrentes são nulas",
+   "descricao": "Lacuna: Produção citava 'tema 1.119 recursos repetitivos' e '122 porções devolvidas' — número específico e designação de tema repetitivo NÃO confirmados nesta sessão; card mantém a tese geral (confirmada) mas os detalhes numéricos ficam como lacuna até nova verificação.",
+   "grupo": "arquivamento",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STJ"
+   ],
+   "tags": [
+    "fundada-suspeita"
+   ],
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/20042022-Revista-pessoal-baseada-em-%E2%80%9Catitude-suspeita%E2%80%9D-e-ilegal--decide-Sexta-Turma.aspx"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico"
+   ],
+   "tipo_decisao": "Nulidade processual",
+   "ref": "HC 598.051 e correlatos, Rel. Min. Rogerio Schietti Cruz",
+   "tribunal": "STJ",
+   "lacuna_investigativa": "Produção citava 'tema 1.119 recursos repetitivos' e '122 porções devolvidas' — número específico e designação de tema repetitivo NÃO confirmados nesta sessão; card mantém a tese geral (confirmada) mas os detalhes numéricos ficam como lacuna até nova verificação.",
+   "promovido_em": "2026-08-06",
+   "promovido_por": "claude.ai — princípio confirmado via stj.jus.br"
+  },
+  {
+   "id": "DI-001",
+   "data": "2021-06-01",
+   "titulo": "STJ (3ª Seção) fixa em EREsp 1.887.511 que quantidade de droga não afasta, por si só, tráfico privilegiado",
+   "descricao": "Origem doutrinária do mecanismo P01-B. Base jurisprudencial para os casos DI-002/003/004.",
+   "grupo": "jurisprudencia_estrutural",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STJ",
     "STF"
    ],
    "tags": [
-    "marco-fundador"
+    "P01",
+    "P01-B"
    ],
    "fontes": [
-    "https://portal.stf.jus.br/jurisprudenciaRepercussao/verPronunciamento.asp?pronunciamento=6639222"
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/18072022-E-possivel-valorar-quantidade-e-natureza-da-droga-tanto-para-fixar-pena-base-quanto-para-modular-diminuicao-.aspx"
    ],
    "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico"
+   ],
+   "tipo_decisao": "Embargos de divergência — fixação de entendimento vinculante (3ª Seção)",
+   "ref": null,
+   "tribunal": "STJ",
+   "lawfare_id": 1804,
+   "analise": "Origem doutrinária do mecanismo P01-B. Base jurisprudencial para os casos DI-002/003/004."
+  },
+  {
+   "id": "JW-018",
+   "data": "2021-01-01",
+   "titulo": "Lázaro Barbosa — Progressão ignorando laudo de periculosidade",
+   "descricao": "Lacuna: R1/R2 (2026-09-12): justicawatch-brasil.json traz fontes genéricas (homes G1/Metrópoles), não URL de matéria específica. Mantido ev-alleged até fonte verificável.",
+   "grupo": "progressao_regime",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "TJGO"
+   ],
+   "tags": [
+    "homicidio",
+    "estupro"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
    "crime_tags": [
     "homicidio",
-    "estupro",
-    "latrocinio"
+    "estupro"
    ],
-   "tipo_decisao": "HC coletivo — declaração incidental de inconstitucionalidade",
-   "ref": "HC 82.959-7/SP — Rel. Min. Marco Aurélio",
-   "tribunal": "STF",
-   "analise": "Marco jurisprudencial fundador do debate sobre progressão em crimes hediondos — origem histórica do cluster de decisões de impacto neste sidecar.",
-   "promovido_em": "2026-08-06",
-   "promovido_por": "claude.ai — busca web confirmou o teor da decisão via portal.stf.jus.br"
-  },
-  {
-   "id": "JW-011",
-   "data": "2009-02-05",
-   "titulo": "STF (HC 84.078/MG) passa a interpretar art. 5º LVII como regra absoluta — impede execução provisória da pena",
-   "descricao": "Lacuna: Tese oscilou 3x em 13 anos (2009→2016→2019) — candidato a novo card de padrão P06 (prescrição/instabilidade estratégica) se cruzado com outros casos de vaivém jurisprudencial.",
-   "grupo": "jurisprudencia_estrutural",
-   "gravidade": null,
-   "relevancia": "alta",
-   "instituicoes": [
-    "STF"
-   ],
-   "tags": [
-    "marco-fundador"
-   ],
-   "fontes": [
-    "https://portal.stf.jus.br/jurisprudenciaRepercussao/verPronunciamento.asp?pronunciamento=6639222"
-   ],
-   "evidence_status": "ev-confirmed",
-   "valor_envolvido": null,
-   "track": "decisoes_impacto",
-   "crime_tags": [
-    "corrupcao"
-   ],
-   "tipo_decisao": "Mudança jurisprudencial (revertida em 2016 pelo HC 126.292, revertida de volta pela ADC 43 em 2019)",
-   "ref": "HC 84.078/MG — Rel. Min. Eros Grau",
-   "tribunal": "STF",
-   "lacuna_investigativa": "Tese oscilou 3x em 13 anos (2009→2016→2019) — candidato a novo card de padrão P06 (prescrição/instabilidade estratégica) se cruzado com outros casos de vaivém jurisprudencial.",
-   "promovido_em": "2026-08-06",
-   "promovido_por": "claude.ai — confirmado via portal.stf.jus.br"
-  },
-  {
-   "id": "JW-012",
-   "data": "2019-11-07",
-   "titulo": "STF julga procedentes ADC 43/44/54 — exige trânsito em julgado para início de cumprimento de pena (reversão Lava Jato)",
-   "descricao": "ADC plenário — 6x5 · STF. Referência: ADC 43 — Rel. Min. Marco Aurélio",
-   "grupo": "jurisprudencia_estrutural",
-   "gravidade": null,
-   "relevancia": "alta",
-   "instituicoes": [
-    "STF"
-   ],
-   "tags": [
-    "reversao-lava-jato"
-   ],
-   "fontes": [
-    "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=429359&ori=1"
-   ],
-   "evidence_status": "ev-confirmed",
-   "valor_envolvido": null,
-   "track": "decisoes_impacto",
-   "crime_tags": [
-    "corrupcao"
-   ],
-   "tipo_decisao": "ADC plenário — 6x5",
-   "ref": "ADC 43 — Rel. Min. Marco Aurélio",
-   "tribunal": "STF",
-   "promovido_em": "2026-08-06",
-   "promovido_por": "claude.ai — confirmado via portal.stf.jus.br, placar 6x5 verificado (Marco Aurélio, Rosa Weber, Lewandowski, Gilmar Mendes, Celso de Mello, Toffoli vs. Moraes, Fachin, Barroso, Fux, Cármen Lúcia)"
-  },
-  {
-   "id": "JW-013",
-   "data": "2020-10-10",
-   "titulo": "André do Rap, líder do PCC, é solto por liminar de Marco Aurélio (HC 191.836) e foge antes da suspensão de Fux — segue foragido",
-   "descricao": "HC monocrático (liminar) — cassada ~8h depois, réu já havia deixado o sistema prisional · STF. Referência: HC 191.836 — Min. Marco Aurélio",
-   "grupo": "foragidos_impacto",
-   "gravidade": null,
-   "relevancia": "alta",
-   "instituicoes": [
-    "STF"
-   ],
-   "tags": [
-    "trafico",
-    "pcc",
-    "foragido"
-   ],
-   "fontes": [
-    "https://pt.wikipedia.org/wiki/Caso_Andr%C3%A9_do_Rap",
-    "https://www.cnnbrasil.com.br/nacional/sudeste/sp/fuga-de-andre-do-rap-completa-5-anos-hoje-relembre-o-caso/"
-   ],
-   "evidence_status": "ev-confirmed",
-   "valor_envolvido": null,
-   "track": "decisoes_impacto",
-   "crime_tags": [
-    "trafico",
-    "pcc",
-    "foragido"
-   ],
-   "tipo_decisao": "HC monocrático (liminar) — cassada ~8h depois, réu já havia deixado o sistema prisional",
-   "ref": "HC 191.836 — Min. Marco Aurélio",
-   "tribunal": "STF",
-   "lawfare_id": 555,
-   "promovido_em": "2026-08-06",
-   "promovido_por": "claude.ai — verificação confirma e CORRIGE o título de produção: liminar foi suspensa por Fux ~8h depois e o Plenário formou maioria (9x1) para manter a prisão; André já havia fugido antes da suspensão, e segue foragido até hoje (2026)."
+   "tipo_decisao": "Progressão de regime",
+   "ref": "Relatório SESP-GO/2021",
+   "tribunal": "TJGO",
+   "lacuna_investigativa": "R1/R2 (2026-09-12): justicawatch-brasil.json traz fontes genéricas (homes G1/Metrópoles), não URL de matéria específica. Mantido ev-alleged até fonte verificável.",
+   "promovido_em": "2026-09-12",
+   "promovido_por": "jusmonitor sync — reingresso condicional do JW sem promover a confirmed"
   },
   {
    "id": "JW-014",
@@ -492,34 +501,39 @@
    "promovido_por": "claude.ai — verificado, 92 liminares concedidas com base no prazo de 90 dias, 21 com mandado de prisão em aberto no CNJ."
   },
   {
-   "id": "JW-015",
-   "data": "2022-04-20",
-   "titulo": "STJ (6ª Turma) fixa que busca pessoal sem fundada suspeita objetiva é ilegal — provas decorrentes são nulas",
-   "descricao": "Lacuna: Produção citava 'tema 1.119 recursos repetitivos' e '122 porções devolvidas' — número específico e designação de tema repetitivo NÃO confirmados nesta sessão; card mantém a tese geral (confirmada) mas os detalhes numéricos ficam como lacuna até nova verificação.",
-   "grupo": "arquivamento",
+   "id": "JW-013",
+   "data": "2020-10-10",
+   "titulo": "André do Rap, líder do PCC, é solto por liminar de Marco Aurélio (HC 191.836) e foge antes da suspensão de Fux — segue foragido",
+   "descricao": "HC monocrático (liminar) — cassada ~8h depois, réu já havia deixado o sistema prisional · STF. Referência: HC 191.836 — Min. Marco Aurélio",
+   "grupo": "foragidos_impacto",
    "gravidade": null,
-   "relevancia": "media",
+   "relevancia": "alta",
    "instituicoes": [
-    "STJ"
+    "STF"
    ],
    "tags": [
-    "fundada-suspeita"
+    "trafico",
+    "pcc",
+    "foragido"
    ],
    "fontes": [
-    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/20042022-Revista-pessoal-baseada-em-%E2%80%9Catitude-suspeita%E2%80%9D-e-ilegal--decide-Sexta-Turma.aspx"
+    "https://pt.wikipedia.org/wiki/Caso_Andr%C3%A9_do_Rap",
+    "https://www.cnnbrasil.com.br/nacional/sudeste/sp/fuga-de-andre-do-rap-completa-5-anos-hoje-relembre-o-caso/"
    ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
    "crime_tags": [
-    "trafico"
+    "trafico",
+    "pcc",
+    "foragido"
    ],
-   "tipo_decisao": "Nulidade processual",
-   "ref": "HC 598.051 e correlatos, Rel. Min. Rogerio Schietti Cruz",
-   "tribunal": "STJ",
-   "lacuna_investigativa": "Produção citava 'tema 1.119 recursos repetitivos' e '122 porções devolvidas' — número específico e designação de tema repetitivo NÃO confirmados nesta sessão; card mantém a tese geral (confirmada) mas os detalhes numéricos ficam como lacuna até nova verificação.",
+   "tipo_decisao": "HC monocrático (liminar) — cassada ~8h depois, réu já havia deixado o sistema prisional",
+   "ref": "HC 191.836 — Min. Marco Aurélio",
+   "tribunal": "STF",
+   "lawfare_id": 555,
    "promovido_em": "2026-08-06",
-   "promovido_por": "claude.ai — princípio confirmado via stj.jus.br"
+   "promovido_por": "claude.ai — verificação confirma e CORRIGE o título de produção: liminar foi suspensa por Fux ~8h depois e o Plenário formou maioria (9x1) para manter a prisão; André já havia fugido antes da suspensão, e segue foragido até hoje (2026)."
   },
   {
    "id": "JW-016",
@@ -550,30 +564,95 @@
    "lacuna_investigativa": "NÃO verificado nesta sessão. Possível confusão com a Recomendação 62/2020 do CNJ (não é decisão do STJ, é recomendação administrativa) — checar antes de promover a ev-confirmed. R1 aplicada: mantido ev-alleged por ausência de fonte."
   },
   {
-   "id": "JW-017",
-   "data": "2025-10-01",
-   "titulo": "Estupro de vulnerável afastado por 'erro de proibição' (STJ, 5ª Turma)",
-   "descricao": "Lacuna: NÃO verificado nesta sessão — nenhum acórdão localizado com esses termos exatos. Risco de conflação com DI-007 (TJMG, fev/2026, 'vínculo afetivo consensual') — tribunal, data e tese diferentes; tratar como caso distinto até confirmação, ou remover se não confirmado em próxima sessão. R1 aplicada: mantido ev-alleged.",
+   "id": "JW-012",
+   "data": "2019-11-07",
+   "titulo": "STF julga procedentes ADC 43/44/54 — exige trânsito em julgado para início de cumprimento de pena (reversão Lava Jato)",
+   "descricao": "ADC plenário — 6x5 · STF. Referência: ADC 43 — Rel. Min. Marco Aurélio",
    "grupo": "jurisprudencia_estrutural",
    "gravidade": null,
-   "relevancia": "media",
+   "relevancia": "alta",
    "instituicoes": [
-    "STJ"
+    "STF"
    ],
    "tags": [
-    "estupro"
+    "reversao-lava-jato"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
+   "fontes": [
+    "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=429359&ori=1"
+   ],
+   "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
    "crime_tags": [
-    "estupro"
+    "corrupcao"
    ],
-   "tipo_decisao": "Distinguishing jurisprudencial",
-   "ref": "STJ 5ª Turma, out/2025",
-   "tribunal": "STJ",
-   "lacuna_investigativa": "NÃO verificado nesta sessão — nenhum acórdão localizado com esses termos exatos. Risco de conflação com DI-007 (TJMG, fev/2026, 'vínculo afetivo consensual') — tribunal, data e tese diferentes; tratar como caso distinto até confirmação, ou remover se não confirmado em próxima sessão. R1 aplicada: mantido ev-alleged."
+   "tipo_decisao": "ADC plenário — 6x5",
+   "ref": "ADC 43 — Rel. Min. Marco Aurélio",
+   "tribunal": "STF",
+   "promovido_em": "2026-08-06",
+   "promovido_por": "claude.ai — confirmado via portal.stf.jus.br, placar 6x5 verificado (Marco Aurélio, Rosa Weber, Lewandowski, Gilmar Mendes, Celso de Mello, Toffoli vs. Moraes, Fachin, Barroso, Fux, Cármen Lúcia)"
+  },
+  {
+   "id": "JW-011",
+   "data": "2009-02-05",
+   "titulo": "STF (HC 84.078/MG) passa a interpretar art. 5º LVII como regra absoluta — impede execução provisória da pena",
+   "descricao": "Lacuna: Tese oscilou 3x em 13 anos (2009→2016→2019) — candidato a novo card de padrão P06 (prescrição/instabilidade estratégica) se cruzado com outros casos de vaivém jurisprudencial.",
+   "grupo": "jurisprudencia_estrutural",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "marco-fundador"
+   ],
+   "fontes": [
+    "https://portal.stf.jus.br/jurisprudenciaRepercussao/verPronunciamento.asp?pronunciamento=6639222"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "corrupcao"
+   ],
+   "tipo_decisao": "Mudança jurisprudencial (revertida em 2016 pelo HC 126.292, revertida de volta pela ADC 43 em 2019)",
+   "ref": "HC 84.078/MG — Rel. Min. Eros Grau",
+   "tribunal": "STF",
+   "lacuna_investigativa": "Tese oscilou 3x em 13 anos (2009→2016→2019) — candidato a novo card de padrão P06 (prescrição/instabilidade estratégica) se cruzado com outros casos de vaivém jurisprudencial.",
+   "promovido_em": "2026-08-06",
+   "promovido_por": "claude.ai — confirmado via portal.stf.jus.br"
+  },
+  {
+   "id": "JW-010",
+   "data": "2006-01-01",
+   "titulo": "STF fixa em HC 82.959-7/SP que a vedação legal de progressão de regime para crimes hediondos é inconstitucional",
+   "descricao": "Marco jurisprudencial fundador do debate sobre progressão em crimes hediondos — origem histórica do cluster de decisões de impacto neste sidecar.",
+   "grupo": "soltura_hc",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "marco-fundador"
+   ],
+   "fontes": [
+    "https://portal.stf.jus.br/jurisprudenciaRepercussao/verPronunciamento.asp?pronunciamento=6639222"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "homicidio",
+    "estupro",
+    "latrocinio"
+   ],
+   "tipo_decisao": "HC coletivo — declaração incidental de inconstitucionalidade",
+   "ref": "HC 82.959-7/SP — Rel. Min. Marco Aurélio",
+   "tribunal": "STF",
+   "analise": "Marco jurisprudencial fundador do debate sobre progressão em crimes hediondos — origem histórica do cluster de decisões de impacto neste sidecar.",
+   "promovido_em": "2026-08-06",
+   "promovido_por": "claude.ai — busca web confirmou o teor da decisão via portal.stf.jus.br"
   }
  ]
 }

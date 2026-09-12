@@ -8,19 +8,24 @@
  "sync_date": "2026-08-12",
  "licenca": "CC0 1.0",
  "canonical_url": "https://jusmonitor.vercel.app",
- "total": 164,
+ "total": 166,
  "excluidos_pendente_enriquecimento": 207,
  "stats": {
   "captura": 147,
-  "decisoes": 17,
+  "decisoes": 19,
   "contributions": 0,
-  "ev_confirmed": 136,
-  "relevancia_alta": 73,
+  "ev_confirmed": 137,
+  "relevancia_alta": 75,
   "hc_traficantes_stj_2024": null,
-  "hc_trafico_stf_2024": null,
-  "taxa_reincidencia_br": null,
-  "populacao_carceraria": null,
-  "foragidos_hc_marco_aurelio_2020": 21
+  "hc_stj_2024_conjur": 10127,
+  "hc_stj_2024_privilegiado": 1578,
+  "hc_stj_2024_concessoes_total": 20114,
+  "hc_trafico_stf_2024": 577,
+  "taxa_reincidencia_br": "42%",
+  "populacao_carceraria": 834000,
+  "foragidos_hc_marco_aurelio_2020": 21,
+  "casos_ancora": 19,
+  "hc_stj_2024_nota": "9.166 (dossiê Seif) e 10.127 (ConJur/STJ, HC+RHC até 26/dez/2024, 49,1% de 20.114 concessões). 1.578 para tráfico privilegiado. Metodologias distintas — não colapsar."
  },
  "alertas_sistemicos": [
   {
@@ -31,7 +36,17 @@
   {
    "nivel": "alto",
    "titulo": "Tráfico Privilegiado Desfigurado",
-   "descricao": "Benefício para réus primários aplicado em apreensões de 200-800kg de drogas (cluster P01-B, DI-001 a DI-006)."
+   "descricao": "EREsp 1.887.511 (2021) fixou que quantidade isolada não afasta o §4º. Aplicações documentadas em 311 kg (2022) e 832 kg (2024). Em 2024, 1.578 HCs do STJ aplicaram o privilegiado (ConJur). O caso DI-006/1809 (110 kg, MPF provido) mostra que o mecanismo não é absoluto (cluster P01-B, DI-001 a DI-006)."
+  },
+  {
+   "nivel": "alto",
+   "titulo": "Ausência de Banco Nacional de Solturas",
+   "descricao": "BNMP 3.0 não correlaciona solturas com reincidência."
+  },
+  {
+   "nivel": "medio",
+   "titulo": "Cautelares 2026 — desclassificação e pena antecipada",
+   "descricao": "Oruam (DI-009/1798): revoga preventiva de tentativa de homicídio e permanece foragido por lavagem. Karen Tanaka (DI-010/1799): revoga tornozeleira após 2 anos sem denúncia em investigação de R$ 35 mi ligada ao PCC."
   }
  ],
  "conflitos_resolvidos": [
@@ -55,7 +70,7 @@
     "numero": 9166,
     "fonte": "Dossiê parlamentar Sen. Jorge Seif ('Ascensão do Narcoestado do Brasil', 2025), metodologia própria não publicada integralmente"
    },
-   "status": "não reconciliado — produção usava apenas valor_b em stats.hc_traficantes_stj_2024; corrigir para exibir ambos"
+   "status": "não reconciliado — exibir valor_a (10.127 ConJur/STJ) e valor_b (9.166 Seif); ver também stats.hc_stj_2024_privilegiado=1578 e concessoes_total=20114"
   }
  ],
  "cards": [
@@ -157,10 +172,45 @@
    "tribunal": null
   },
   {
+   "id": "DI-010",
+   "data": "2026-08-01",
+   "titulo": "Karen Tanaka ('Japa do PCC') — Justiça de SP revoga tornozeleira em investigação de R$ 35 mi",
+   "descricao": "Cautelar 2026: revogação de tornozeleira após >2 anos sem denúncia — risco de pena antecipada. Cluster com DI-009 (Oruam).",
+   "grupo": "foragidos_impacto",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "TJSP"
+   ],
+   "tags": [
+    "pcc",
+    "lavagem-de-dinheiro",
+    "trafico"
+   ],
+   "fontes": [
+    "https://www.metropoles.com/distrito-federal/na-mira/justica-de-sp-revoga-uso-de-tornozeleira-eletronica-de-japa-do-pcc",
+    "https://bhaz.com.br/primeiramao/justica-revoga-tornozeleira-e-recolhimento-noturno-da-japa-do-pcc/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 35.000.000,00 (investigação de lavagem)",
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "trafico",
+    "pcc"
+   ],
+   "tipo_decisao": "Revogação de medida cautelar",
+   "ref": "Vara Estadual das Garantias de Orcrim e Lavagem/SP — juíza Paula Regina Schempf Cattan, 01/ago/2026",
+   "tribunal": "TJSP",
+   "lawfare_id": 1799,
+   "analise": "Cautelar 2026: revogação de tornozeleira após >2 anos sem denúncia — risco de pena antecipada. Cluster com DI-009 (Oruam).",
+   "promovido_em": "2026-09-12",
+   "promovido_por": "jusmonitor sync — ingestão justicawatch-brasil.json id_corpus 1799"
+  },
+  {
    "id": "DI-009",
    "data": "2026-07-31",
    "titulo": "Justiça do Rio revoga prisão preventiva de Oruam por tentativa de homicídio, mas rapper permanece foragido por mandado distinto de lavagem de dinheiro",
-   "descricao": "Ponto de inflexão: Desclassificação de dupla tentativa de homicídio para lesão corporal leve — pena máxima abaixo do limiar de custódia cautelar. Lacuna: HC sobre mandado remanescente (lavagem) julgado em 12/08/2026 — atualizar quando decidido.",
+   "descricao": "A juíza desclassificou a conduta para lesões e infrações com pena máxima inferior a 4 anos. Mandado distinto de lavagem de dinheiro segue ativo. Checagem em fontes independentes (CNN, SBT, Band, Portal Tela, Metrópoles) corrige a leitura de que ele 'deixou de ser foragido'.",
    "grupo": "foragidos_impacto",
    "gravidade": null,
    "relevancia": "alta",
@@ -170,24 +220,32 @@
    ],
    "tags": [
     "desclassificacao-penal",
-    "medida-cautelar"
+    "medida-cautelar",
+    "homicidio",
+    "foragido",
+    "lavagem-de-dinheiro"
    ],
    "fontes": [
     "https://www.cnnbrasil.com.br/nacional/sudeste/rj/justica-do-rio-revoga-prisao-de-oruam-por-tentativa-de-homicidio/",
-    "https://www.metropoles.com/colunas/mirelle-pinheiro/entenda-por-que-oruam-teve-a-prisao-preventiva-revogada-pela-justica"
+    "https://www.metropoles.com/colunas/mirelle-pinheiro/entenda-por-que-oruam-teve-a-prisao-preventiva-revogada-pela-justica",
+    "https://www.portaltela.com/brasil/2026/08/01/justica-revoga-prisao-preventiva-de-oruam-mas-rapper-segue-foragido/",
+    "https://sbtnews.sbt.com.br/noticia/brasil/tribunal-de-justica-do-rj-revoga-prisao-de-oruam"
    ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null,
    "track": "decisoes_impacto",
    "crime_tags": [
-    "homicidio"
+    "homicidio",
+    "foragido"
    ],
-   "tipo_decisao": "Revogação de prisão preventiva com desclassificação penal",
-   "ref": null,
-   "tribunal": "TJRJ (3ª Vara Criminal)",
+   "tipo_decisao": "Revogação de preventiva",
+   "ref": "3ª Vara Criminal do Rio — juíza Tula Corrêa de Mello, 31/jul/2026",
+   "tribunal": "TJRJ",
    "lawfare_id": 1798,
    "lacuna_investigativa": "HC sobre mandado remanescente (lavagem) julgado em 12/08/2026 — atualizar quando decidido.",
-   "ponto_de_inflexao": "Desclassificação de dupla tentativa de homicídio para lesão corporal leve — pena máxima abaixo do limiar de custódia cautelar."
+   "ponto_de_inflexao": "Desclassificação de dupla tentativa de homicídio para lesão corporal leve — pena máxima abaixo do limiar de custódia cautelar.",
+   "promovido_em": "2026-09-12",
+   "promovido_por": "jusmonitor sync — merge metadados justicawatch-brasil.json (1798) sem novo card"
   },
   {
    "id": 1621,
@@ -4148,6 +4206,36 @@
    "tipo_decisao": null,
    "ref": null,
    "tribunal": null
+  },
+  {
+   "id": "JW-018",
+   "data": "2021-01-01",
+   "titulo": "Lázaro Barbosa — Progressão ignorando laudo de periculosidade",
+   "descricao": "Lacuna: R1/R2 (2026-09-12): justicawatch-brasil.json traz fontes genéricas (homes G1/Metrópoles), não URL de matéria específica. Mantido ev-alleged até fonte verificável.",
+   "grupo": "progressao_regime",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "TJGO"
+   ],
+   "tags": [
+    "homicidio",
+    "estupro"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null,
+   "track": "decisoes_impacto",
+   "crime_tags": [
+    "homicidio",
+    "estupro"
+   ],
+   "tipo_decisao": "Progressão de regime",
+   "ref": "Relatório SESP-GO/2021",
+   "tribunal": "TJGO",
+   "lacuna_investigativa": "R1/R2 (2026-09-12): justicawatch-brasil.json traz fontes genéricas (homes G1/Metrópoles), não URL de matéria específica. Mantido ev-alleged até fonte verificável.",
+   "promovido_em": "2026-09-12",
+   "promovido_por": "jusmonitor sync — reingresso condicional do JW sem promover a confirmed"
   },
   {
    "id": "JW-014",

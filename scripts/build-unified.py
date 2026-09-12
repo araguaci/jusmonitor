@@ -336,12 +336,17 @@ def build():
                 1 for c in all_cards if c.get("relevancia") == "alta"
             ),
             "hc_traficantes_stj_2024": dec_stats.get("hc_traficantes_stj_2024"),
+            "hc_stj_2024_conjur": dec_stats.get("hc_stj_2024_conjur"),
+            "hc_stj_2024_privilegiado": dec_stats.get("hc_stj_2024_privilegiado"),
+            "hc_stj_2024_concessoes_total": dec_stats.get("hc_stj_2024_concessoes_total"),
             "hc_trafico_stf_2024": dec_stats.get("hc_trafico_stf_2024"),
             "taxa_reincidencia_br": dec_stats.get("taxa_reincidencia_br"),
             "populacao_carceraria": dec_stats.get("populacao_carceraria"),
             "foragidos_hc_marco_aurelio_2020": dec_stats.get(
                 "foragidos_hc_marco_aurelio_2020"
             ),
+            "casos_ancora": dec_stats.get("casos_ancora"),
+            "hc_stj_2024_nota": dec_stats.get("hc_stj_2024_nota"),
         },
         "alertas_sistemicos": alertas,
         "conflitos_resolvidos": conflitos,
