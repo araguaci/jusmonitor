@@ -1,0 +1,104 @@
+name: jusmonitor.vercel.app
+description: 'Painel open-source de monitoramento do Judiciário brasileiro: rastreia
+  captura institucional (penduricalhos, corrupção judicial, CNJ) e decisões de alto
+  impacto (HCs, solturas, progressões), com classificação evidencial R1–R7 e trilha
+  de fontes auditáveis.'
+status: produção
+version: 0.1.0
+priority: alto
+stack:
+- Vercel
+repo: https://github.com/araguaci/jusmonitor.git
+deploy_url: ''
+last_updated: '2026-08-15'
+tags:
+- judiciário
+- open-data
+- monitoramento-cívico
+- transparência
+- dados-públicos
+- CC0
+- lawfare
+- ecossistema-selva
+owner: araguaci
+notes: Projeto CC0 sem monetização direta; valor concentrado em reputação, citação
+  acadêmica/jornalística e alimentação do ecossistema SELVA. Health declarado em 85%.
+  Fase 1 e 2 concluídas; escala editorial e integrações automatizadas ainda pendentes.
+git:
+  branch: main
+  last_commit: 'feat: implement project versioning, site visit tracking, and documentation
+    updates including changelog and architecture overview.'
+  last_commit_date: '2026-08-10'
+roi:
+  score: 35
+  nivel: baixo
+  justificativa: Projeto open data sob licença CC0 sem modelo de receita direta. O
+    retorno é reputacional e cívico, funcionando como funil de credibilidade para
+    o ecossistema de dossiês (GoSurf, lawfare-timeline). Monetização indireta possível
+    mas não estruturada.
+  fatores_positivos:
+  - Corpus único e auditável sobre captura institucional do Judiciário brasileiro,
+    com classificação evidencial R1–R7
+  - Integração sólida com ecossistema de 12+ hubs temáticos, ampliando alcance e citação
+    cruzada
+  - Stack leve (HTML estático + JSON + Vercel) com custo operacional próximo de zero
+  fatores_negativos:
+  - Sem modelo de receita — licença CC0 impede paywall e dificulta monetização direta
+  - Público-alvo nicho (advocacy, jornalismo investigativo, pesquisa jurídica) com
+    baixa disposição para pagar
+conversao:
+  score: 15
+  nivel: baixo
+  justificativa: O projeto é deliberadamente open data / CC0, sem intenção de monetização
+    direta. Converter para produto pago exigiria mudança fundamental de posicionamento,
+    o que conflita com a missão cívica declarada. Possível monetização indireta via
+    consultoria ou editorial, mas não está no escopo atual.
+  modelo_sugerido: open-source
+  publico_alvo: Jornalistas investigativos, pesquisadores jurídicos, organizações
+    de advocacy, cidadãos engajados em transparência judicial
+kpi:
+  producao:
+    uptime_meta: 99.9%
+    usuarios_ativos: a medir
+    receita_mensal: R$ 0
+    taxa_erro_meta: < 1%
+    tempo_resposta_meta: < 300ms
+    nps: a medir
+    maturidade: médio
+    notas: Site estático no Vercel com cache configurado para /data/*. Health declarado
+      em 85%. Possui contador de visitas descentralizado (stats.artesdosul.com) mas
+      sem métricas estruturadas de usuários ou engajamento.
+  desenvolvimento:
+    velocidade: média
+    cobertura_testes: a medir
+    divida_tecnica: baixa
+    bugs_abertos: a medir
+    features_pendentes: Fase 3 (escala editorial, PWA, redirect canônico) e Fase 4
+      (sync automatizado com lawfare-timeline, auditoria card a card)
+    notas: CI com validação de dados (validate-schema, validate-evidence-rules) já
+      implementada. Stack simples (HTML/CSS/JS + Python de build) mantém dívida técnica
+      baixa. Fases 1 e 2 concluídas; desenvolvimento ativo mas sem cadência visível
+      de commits.
+    commits_ultima_semana: 2
+    commits_ultimo_mes: 7
+    total_commits: 7
+    arquivos_nao_commitados: 3
+  planejamento:
+    nivel_planejamento: estruturado
+    tem_roadmap: true
+    tem_backlog: true
+    tem_deadline_definido: false
+    prazo_mvp: concluído
+    progresso_estimado: 60%
+    proxima_entrega: Fase 3 — escala editorial com ampliação do corpus HC/progressão,
+      PWA opcional e redirect gosurf para canônico
+    riscos_identificados:
+    - Dependência de curadoria humana para alimentação do corpus pode limitar escala
+    - Sync automatizado com lawfare-timeline ainda não implementado — risco de defasagem
+      de dados
+    - Nicho restrito pode dificultar engajamento sustentável de contribuidores externos
+    notas: Roadmap bem definido em 4 fases com checkboxes de progresso. Schema versionado
+      (1.1.0) e contrato JSON documentado. Planejamento maduro para projeto open-source
+      cívico, porém sem deadlines ou sprints definidos.
+_gerado_em: '2026-08-15'
+_gerado_por: generate_manifests.py
