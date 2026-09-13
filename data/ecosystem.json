@@ -86,5 +86,13 @@
     "icon": "shield",
     "current": false,
     "image": "https://abusosupremo.vercel.app/censura.png"
+  },
+  {
+    "href": "https://arquivo-vivo-omega.vercel.app/",
+    "title": "Arquivo Vivo",
+    "description": "Catálogo aberto de casos verificáveis de resolução prática, transmissão de conhecimento e contribuição coletiva no Brasil.",
+    "icon": "book",
+    "current": false,
+    "image": "https://arquivo-vivo-omega.vercel.app/assets/arquivo-vivo-hero.png"
   }
 ]

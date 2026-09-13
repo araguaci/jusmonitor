@@ -33,6 +33,7 @@ Mesma disciplina: **fonte auditável, hipótese ≠ fato**, deploy público rast
 | **Geoengenharia** | [geoengenharia.vercel.app](https://geoengenharia.vercel.app/) | Patentes e modificação climática |
 | **O Dragão e a Onça** | [odragaoeaonca.vercel.app](https://odragaoeaonca.vercel.app/) | Série Brasil × China |
 | **Abuso Supremo** | [abusosupremo.vercel.app](https://abusosupremo.vercel.app/) | Cronologia de censura 2019–2025 |
+| **Arquivo Vivo** | [arquivo-vivo-omega.vercel.app](https://arquivo-vivo-omega.vercel.app/) | Catálogo de sabedoria prática com rastro — ofício, método e contribuição coletiva |
 
 Nav canônica (monorepo): `sabor-brazil/data/ecosystem.json` · espelho local: [`data/ecosystem.json`](data/ecosystem.json).  
 Eixo Sentinel: [`SENTINEL-EIXO-SELVA.md`](https://github.com/araguaci/ai-projects/blob/main/docs/estrategia/SENTINEL-EIXO-SELVA.md) · meta-hub: [ecosistema-selva.vercel.app](https://ecosistema-selva.vercel.app/).

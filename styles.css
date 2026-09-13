@@ -834,6 +834,117 @@ h1 em {
   border-color: var(--gold);
 }
 
+/* Ecossistema SELVA — faixa discreta antes do rodapé */
+.eco-strip {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 1rem;
+}
+
+.eco-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.eco-lead {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  color: var(--ink2);
+  margin-top: 0.35rem;
+  max-width: 42rem;
+}
+
+.eco-meta {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--teal);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+}
+
+.eco-meta:hover {
+  border-bottom-color: var(--teal);
+}
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.eco-loading,
+.eco-empty {
+  grid-column: 1 / -1;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--ink3);
+  padding: 0.75rem 0;
+}
+
+.eco-card {
+  display: block;
+  padding: 0.85rem 0.95rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s;
+  min-height: 100%;
+}
+
+.eco-card:hover {
+  border-color: rgba(212, 175, 90, 0.35);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.eco-card.is-current {
+  border-color: rgba(45, 212, 191, 0.28);
+  background: rgba(45, 212, 191, 0.04);
+  pointer-events: none;
+}
+
+.eco-card-title {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.eco-card-title .eco-badge {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--teal);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  padding: 0.08rem 0.35rem;
+  border-radius: 2px;
+}
+
+.eco-card-desc {
+  font-family: var(--serif);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--ink3);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 footer {
   border-top: 1px solid var(--border);
   padding: 2rem 1.25rem;
@@ -899,6 +1010,16 @@ footer a:hover {
   }
 
   .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .eco-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 980px) {
+  .eco-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -492,6 +492,47 @@
     });
   }
 
+  function renderEcosystem(hubs) {
+    const el = document.getElementById("ecoGrid");
+    if (!el) return;
+    if (!hubs || !hubs.length) {
+      el.innerHTML = '<div class="eco-empty">Ecossistema indisponível.</div>';
+      return;
+    }
+    el.innerHTML = hubs
+      .map(function (h) {
+        const current = !!h.current;
+        const title = esc(h.title || "");
+        const desc = esc(h.description || "");
+        const href = esc(h.href || "#");
+        const badge = current ? '<span class="eco-badge">este hub</span>' : "";
+        if (current) {
+          return (
+            '<div class="eco-card is-current" aria-current="page">' +
+            '<div class="eco-card-title">' +
+            title +
+            badge +
+            "</div>" +
+            '<p class="eco-card-desc">' +
+            desc +
+            "</p></div>"
+          );
+        }
+        return (
+          '<a class="eco-card" href="' +
+          href +
+          '" target="_blank" rel="noopener noreferrer">' +
+          '<div class="eco-card-title">' +
+          title +
+          "</div>" +
+          '<p class="eco-card-desc">' +
+          desc +
+          "</p></a>"
+        );
+      })
+      .join("");
+  }
+
   function boot(data) {
     raw = data;
     cards = data.cards || [];
@@ -530,5 +571,16 @@
         '<div class="error-state">Falha ao carregar data/unified.json — ' +
         esc(err.message) +
         "</div>";
+    });
+
+  fetch("data/ecosystem.json")
+    .then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    })
+    .then(renderEcosystem)
+    .catch(function () {
+      const el = document.getElementById("ecoGrid");
+      if (el) el.innerHTML = '<div class="eco-empty">Falha ao carregar data/ecosystem.json.</div>';
     });
 })();
